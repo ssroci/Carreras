@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import cursosData from "../Data/cursosData";
+import cursosData from "../Data/CursosData";
 import "./CursosDetalle.css";
 
 export default function CursoDetalle() {
