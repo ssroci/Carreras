@@ -1,0 +1,43 @@
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ebe7e7; 
+  font-family: Arial, Helvetica, sans-serif;
+
+  
+box-shadow: 0 4px 15px rgba(108, 81, 133, 0.253);
+
+  
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+}
+
+.bi-geo-alt-fill{
+    margin-left: 40px ;
+    color: #e70b0b;
+
+}
+.logo a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  color: #5a5a5a;
+}
+
+.nav-links a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #228ac7;
+}
