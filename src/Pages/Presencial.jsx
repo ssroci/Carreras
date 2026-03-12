@@ -1,8 +1,33 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { areasData } from "../Data/Carreras";
+import { unrnData } from "../Data/Presencial/Unrn";
+import { ubaCarreras } from "../Data/Presencial/uba";
+import { utnCarreras } from "../Data/Presencial/utn";
+import { unrcCarreras } from "../Data/Presencial/unrc";
+import { unluCarreras } from "../Data/Presencial/unlu";
+import { unlpCarreras } from "../Data/Presencial/unlp";
+import { uncomaData } from "../Data/Presencial/uncomaData";
+import { ufloCarreras } from "../Data/Presencial/uflo";
+import { ucasalCarreras } from "../Data/Presencial/ucasal";
+
+import { uncCarreras } from "../Data/Presencial/unc";
 import Buscador from "../Components/Buscador";
+
 import "./Presencial.css";
+
+// Unificamos todos los arrays en uno solo
+const areasData = [
+  ...unrnData,
+  ...utnCarreras,
+  ...unrcCarreras,
+  ...unluCarreras,
+  ...unlpCarreras,
+  ...uncomaData,
+  ...ufloCarreras,
+  ...ucasalCarreras,
+  ...ubaCarreras,
+  ...uncCarreras
+];
 
 function Presencial() {
   const [busqueda, setBusqueda] = useState("");
@@ -25,7 +50,6 @@ function Presencial() {
         <p className="contador">{resultados.length} carreras encontradas</p>
       )}
 
-      {/* Si hay búsqueda, mostrar resultados */}
       {busqueda && resultados.length === 0 && (
         <p className="sin-resultados">No se encontraron carreras.</p>
       )}
@@ -58,7 +82,6 @@ function Presencial() {
         </div>
       )}
 
-      {/* Si no hay búsqueda, mostrar categorías */}
       {!busqueda && (
         <div className="categorias">
           {categorias.map((cat) => (
