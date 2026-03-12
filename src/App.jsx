@@ -1,28 +1,32 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
 import Presencial from "./Pages/Presencial";
 import Virtual from "./Pages/Virtual";
 import Cursos from "./Pages/Cursos";
-import CarreraDetalle from "./Pages/CarreraDetalle";
-import AreaVirtual from "./Pages/AreaVirtual";
-import CursosDetalle from "./Pages/CursosDetalle";
+import Categoria from "./Pages/Categoria";
+import CategoriaVirtual from "./Pages/CategoriaVirtual";
 
-function App() {
+function AppRoutes() {
+  const location = useLocation();
+
   return (
     <>
       <Header />
-      <Routes>
+      <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/presencial" element={<Presencial />} />
-        <Route path="/presencial/:id" element={<CarreraDetalle />} />
+        <Route path="/presencial/:tipo" element={<Categoria />} />
         <Route path="/virtual" element={<Virtual />} />
-        <Route path="/virtual/:id" element={<AreaVirtual />} />
+        <Route path="/virtual/:categoria" element={<CategoriaVirtual />} />
         <Route path="/cursos" element={<Cursos />} />
-        <Route path="/cursos/:id" element={<CursosDetalle />} />
       </Routes>
     </>
   );
+}
+
+function App() {
+  return <AppRoutes />;
 }
 
 export default App;

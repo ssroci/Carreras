@@ -1,21 +1,13 @@
-import { useState } from "react";
 
-function Buscador({ modalidad }) {
 
-  const [busqueda, setBusqueda] = useState("");
-
+function Buscador({ setBusqueda }) {
   return (
-    <div>
-
-      <h2>Carreras {modalidad}</h2>
-
+    <div className="buscador">
       <input
         type="text"
         placeholder="Buscar carrera..."
-        value={busqueda}
         onChange={(e) => setBusqueda(e.target.value)}
       />
-
     </div>
   );
 }

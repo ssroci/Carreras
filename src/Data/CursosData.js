@@ -1,250 +1,324 @@
-const cursosData = [
+        const cursosData = [
   {
-    id: 1,
-    area: "Tecnología e Informática",
-    icono: "bi-cpu-fill",
-    color: "#4fc3f7",
-    descripcion: "Programación, desarrollo web, ciberseguridad, inteligencia artificial y más.",
-    cursos: [
-      {
-        nombre: "Desarrollo Web Full Stack",
-        institucion: "UTN (Universidad Tecnológica Nacional)",
-        duracion: "8 meses",
-        link: "https://sceu.frba.utn.edu.ar/"
-      },
-      {
-        nombre: "Programación en Python",
-        institucion: "UTN (Universidad Tecnológica Nacional)",
-        duracion: "4 meses",
-        link: "https://sceu.frba.utn.edu.ar/"
-      },
-      {
-        nombre: "Ciberseguridad",
-        institucion: "UTN (Universidad Tecnológica Nacional)",
-        duracion: "6 meses",
-        link: "https://sceu.frba.utn.edu.ar/"
-      },
-      {
-        nombre: "Inteligencia Artificial y Machine Learning",
-        institucion: "Universidad Austral",
-        duracion: "5 meses",
-        link: "https://www.austral.edu.ar/educacion-continua/"
-      },
-      {
-        nombre: "Diseño UX/UI",
-        institucion: "Digital House",
-        duracion: "6 meses",
-        link: "https://www.digitalhouse.com/ar"
-      },
-      {
-        nombre: "Data Science",
-        institucion: "Digital House",
-        duracion: "7 meses",
-        link: "https://www.digitalhouse.com/ar"
-      }
-    ]
-  },
-  {
-    id: 2,
-    area: "Salud y Bienestar",
-    icono: "bi-heart-pulse-fill",
-    color: "#e94560",
-    descripcion: "Primeros auxilios, nutrición, salud mental, gerontología y bienestar personal.",
-    cursos: [
-      {
-        nombre: "Primeros Auxilios y RCP",
-        institucion: "Cruz Roja Argentina",
-        duracion: "1 mes",
-        link: "https://www.cruzroja.org.ar/"
-      },
-      {
-        nombre: "Nutrición y Alimentación Saludable",
-        institucion: "Universidad Favaloro",
-        duracion: "3 meses",
-        link: "https://www.favaloro.edu.ar/educacion-continua/"
-      },
-      {
-        nombre: "Salud Mental y Bienestar",
-        institucion: "FLACSO Argentina",
-        duracion: "4 meses",
-        link: "https://www.flacso.org.ar/"
-      },
-      {
-        nombre: "Gerontología y Cuidado del Adulto Mayor",
-        institucion: "Universidad Maimónides",
-        duracion: "5 meses",
-        link: "https://www.maimonides.edu/"
-      },
-      {
-        nombre: "Yoga y Meditación",
-        institucion: "Instituto Argentino de Yoga",
-        duracion: "3 meses",
-        link: "https://www.institutoargentinodeyoga.com/"
-      }
-    ]
-  },
-  {
-    id: 3,
-    area: "Administración y Negocios",
-    icono: "bi-briefcase-fill",
+    id: "informatica",
+    area: "Informática, Programación y Sistemas",
+    icono: "bi-code-slash",
     color: "#f5a623",
-    descripcion: "Marketing digital, gestión de proyectos, finanzas, RRHH y emprendimiento.",
+    descripcion: "Cursos de programación, desarrollo web, bases de datos, IA y más.",
     cursos: [
       {
-        nombre: "Marketing Digital",
-        institucion: "IAB Argentina",
-        duracion: "4 meses",
-        link: "https://iabargentina.com.ar/"
+        nombre: "Curso de Fundamentos de la Programación",
+        institucion: "UTN FRBA",
+        duracion: "9 semanas",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/2640/curso-de-fundamentos-de-la-programacion",
       },
       {
-        nombre: "Gestión de Proyectos (PMP)",
-        institucion: "UTN (Universidad Tecnológica Nacional)",
-        duracion: "5 meses",
-        link: "https://sceu.frba.utn.edu.ar/"
+        nombre: "Curso de React Native",
+        institucion: "UTN FRBA",
+        duracion: "16 lecciones",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/35208/curso-de-react-native",
       },
       {
-        nombre: "Comercio Exterior",
-        institucion: "UCEMA",
-        duracion: "6 meses",
-        link: "https://www.ucema.edu.ar/"
+        nombre: "Curso de Transformación Digital por medio de Inteligencia Artificial",
+        institucion: "UTN FRBA",
+        duracion: "11 semanas",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/3338/curso-de-transformacion-digital-por-medio-de-inteligencia-artificial",
       },
       {
-        nombre: "Recursos Humanos",
-        institucion: "Universidad Siglo 21",
-        duracion: "4 meses",
-        link: "https://21.edu.ar/"
+        nombre: "Curso de MicroPython nivel inicial",
+        institucion: "UTN FRBA",
+        duracion: "10 semanas",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/2993/curso-de-micro-python-nivel-inicial",
       },
       {
-        nombre: "Finanzas Personales e Inversiones",
-        institucion: "Universidad Austral",
-        duracion: "3 meses",
-        link: "https://www.austral.edu.ar/educacion-continua/"
+        nombre: "Curso de Excel Básico",
+        institucion: "UTN FRBA",
+        duracion: "7 semanas",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/2571/curso-de-excel-basico",
       },
       {
-        nombre: "Emprendimiento e Innovación",
-        institucion: "UTDT (Universidad Torcuato Di Tella)",
-        duracion: "3 meses",
-        link: "https://www.utdt.edu/"
-      }
-    ]
+        nombre: "Curso de Excel Avanzado",
+        institucion: "UTN FRBA",
+        duracion: "8 semanas",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/3175/curso-de-excel-avanzado",
+      },
+      {
+        nombre: "Curso de Diseño de cursos con ChatGPT e IA",
+        institucion: "UTN FRBA",
+        duracion: "3 semanas",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/3858/curso-de-diseno-de-cursos-con-chat-gpt-e-ia-inteligencia-artificial",
+      },
+    ],
   },
+
   {
-    id: 4,
-    area: "Arte y Diseño",
+    id: "administracion",
+    area: "Administración de Empresas",
+    icono: "bi-briefcase-fill",
+    color: "#22c790",
+    descripcion: "Cursos de gestión empresarial, liderazgo, recursos humanos y finanzas.",
+    cursos: [
+      {
+        nombre: "Cómo Gestionar una Pyme",
+        institucion: "UTN FRBA",
+        duracion: "7 semanas",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/461/como-gestionar-una-pyme",
+      },
+      {
+        nombre: "Analista PMO – Project Management Officer",
+        institucion: "UTN FRBA",
+        duracion: "5 semanas",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/551/analista-pmo-project-management-officer",
+      },
+      {
+        nombre: "Curso de Liderazgo ágil y transformación organizacional",
+        institucion: "UTN FRBA",
+        duracion: "10 semanas",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/3173/curso-de-liderazgo-agil-y-transformacion-organizacional",
+      },
+      {
+        nombre: "Introducción a la Gestión por Procesos",
+        institucion: "UTN FRBA",
+        duracion: "6 semanas",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/180/introduccion-a-la-gestion-por-procesos",
+      },
+      {
+        nombre: "Curso de Implementación de Sistema de Gestión de la Calidad ISO 9001:2015",
+        institucion: "UTN FRBA",
+        duracion: "8 semanas",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/1389/curso-de-implementacion-de-sistema-de-gestion-de-la-calidad-iso-9001-2015",
+      },
+      {
+        nombre: "Curso de Liquidación Ingresos Brutos convenio multilateral AFIP",
+        institucion: "UTN FRBA",
+        duracion: "4 semanas",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/2521/curso-de-liquidacion-ingresos-brutos-convenio-multilateral-afip",
+      },
+      {
+        nombre: "Prevención del lavado de dinero y financiación del Terrorismo",
+        institucion: "UTN FRBA",
+        duracion: "5 semanas",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/1229/prevencion-del-lavado-de-dinero-y-financiacion-del-terrorismo",
+      },
+    ],
+  },
+
+  {
+    id: "marketing",
+    area: "Marketing y Comunicación",
+    icono: "bi-megaphone-fill",
+    color: "#e94560",
+    descripcion: "Cursos de marketing digital, redes sociales, publicidad y comunicación.",
+    cursos: [
+      {
+        nombre: "Curso de Google Analytics y Data Studio",
+        institucion: "UTN FRBA",
+        duracion: "10 semanas",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/2532/curso-de-google-analytics-y-data-studio",
+      },
+      {
+        nombre: "Tecnicatura Universitaria en Comercio Electrónico y Marketing Digital",
+        institucion: "UTN FRBA",
+        duracion: "2 años y medio",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/carrera/1603/tecnicatura-universitaria-en-comercio-electronico-y-marketing-digital",
+      },
+    ],
+  },
+
+  {
+    id: "diseno",
+    area: "Diseño, Imagen y Sonido",
     icono: "bi-palette-fill",
-    color: "#a78bfa",
-    descripcion: "Diseño gráfico, fotografía, ilustración, producción musical y animación.",
+    color: "#f472b6",
+    descripcion: "Cursos de diseño gráfico, UI/UX, fotografía, video y producción audiovisual.",
     cursos: [
       {
-        nombre: "Diseño Gráfico Digital",
-        institucion: "FADU - UBA",
-        duracion: "6 meses",
-        link: "https://www.fadu.uba.ar/"
+        nombre: "Curso de Desarrollo de interfaces con Figma",
+        institucion: "UTN FRBA",
+        duracion: "14 semanas",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/4210/curso-de-desarrollo-de-interfaces-con-figma",
       },
       {
-        nombre: "Fotografía Digital",
-        institucion: "Centro Cultural Ricardo Rojas (UBA)",
-        duracion: "3 meses",
-        link: "https://rojas.uba.ar/"
+        nombre: "Tecnicatura Universitaria en Diseño Gráfico Digital",
+        institucion: "UTN FRBA",
+        duracion: "2 años",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/carrera/181238/tecnicatura-universitaria-en-diseno-grafico-digital",
       },
-      {
-        nombre: "Ilustración y Diseño Editorial",
-        institucion: "FADU - UBA",
-        duracion: "4 meses",
-        link: "https://www.fadu.uba.ar/"
-      },
-      {
-        nombre: "Producción Musical",
-        institucion: "Berklee Online (sede Argentina)",
-        duracion: "5 meses",
-        link: "https://online.berklee.edu/"
-      },
-      {
-        nombre: "Animación y Motion Graphics",
-        institucion: "Digital House",
-        duracion: "6 meses",
-        link: "https://www.digitalhouse.com/ar"
-      }
-    ]
+    ],
   },
+
   {
-    id: 5,
+    id: "finanzas",
+    area: "Finanzas y Mercado de Capitales",
+    icono: "bi-currency-dollar",
+    color: "#38bdf8",
+    descripcion: "Cursos de trading, bolsa de valores, criptomonedas y análisis financiero.",
+    cursos: [
+      {
+        nombre: "Trader en Opciones Financieras y Futuros",
+        institucion: "UTN FRBA",
+        duracion: "5 semanas",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/1190/trader-en-opciones-financieras-y-futuros",
+      },
+      {
+        nombre: "Operador de Bonos",
+        institucion: "UTN FRBA",
+        duracion: "5 semanas",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/1735/operador-de-bonos",
+      },
+    ],
+  },
+
+  {
+    id: "industria",
+    area: "Industria, Energía y Construcción",
+    icono: "bi-tools",
+    color: "#fb923c",
+    descripcion: "Cursos técnicos de seguridad eléctrica, piping, energías y construcción.",
+    cursos: [
+      {
+        nombre: "Curso de Seguridad Eléctrica",
+        institucion: "UTN FRBA",
+        duracion: "6 semanas",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/2560/curso-de-seguridad-electrica",
+      },
+      {
+        nombre: "Dimensionamiento de Cañerías y Técnicas de Piping – Básico",
+        institucion: "UTN FRBA",
+        duracion: "8 semanas",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/1225/dimensionamiento-de-canerias-y-tecnicas-de-piping-basico",
+      },
+    ],
+  },
+
+  {
+    id: "salud",
+    area: "Salud y Medicina",
+    icono: "bi-heart-pulse-fill",
+    color: "#a78bfa",
+    descripcion: "Cursos de salud, cosmética, primeros auxilios y bienestar.",
+    cursos: [
+      {
+        nombre: "Curso de Dermocosmética",
+        institucion: "UTN FRBA",
+        duracion: "6 semanas",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/2869/curso-de-dermocosmetica",
+      },
+      {
+        nombre: "Curso Básico de Reparación y Mantenimiento de Celulares",
+        institucion: "UTN FRBA",
+        duracion: "6 semanas",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/2250/curso-basico-de-reparacion-y-mantenimiento-de-celulares",
+      },
+    ],
+  },
+
+  {
+    id: "educacion",
+    area: "Educación y Capacitación",
+    icono: "bi-mortarboard-fill",
+    color: "#4ade80",
+    descripcion: "Cursos sobre pedagogía, formación docente y diseño de contenidos educativos.",
+    cursos: [
+      {
+        nombre: "Cómo elaborar, implementar y evaluar un proyecto de capacitación",
+        institucion: "UTN FRBA",
+        duracion: "4 semanas",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/308/como-elaborar-implementar-y-evaluar-en-forma-eficaz-un-proyecto-o-programa-de-capacitacion-en-la-organizacion",
+      },
+      {
+        nombre: "Coaching Ontológico",
+        institucion: "UTN FRBA",
+        duracion: "6 semanas",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/433/coaching-ontologico",
+      },
+    ],
+  },
+
+  {
+    id: "idiomas",
     area: "Idiomas",
     icono: "bi-translate",
-    color: "#34d399",
-    descripcion: "Inglés, portugués, francés, italiano, alemán y más idiomas con certificación.",
+    color: "#4fc3f7",
+    descripcion: "Cursos de inglés, portugués y otros idiomas con certificación UTN.",
     cursos: [
       {
-        nombre: "Inglés (todos los niveles)",
-        institucion: "British Council Argentina",
-        duracion: "4 meses por nivel",
-        link: "https://www.britishcouncil.org.ar/"
+        nombre: "Curso de Portugués Básico",
+        institucion: "UTN FRBA",
+        duracion: "11 semanas",
+        link: "https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/3159/curso-de-portugues-basico",
       },
-      {
-        nombre: "Portugués Brasileño",
-        institucion: "Instituto Cultural Brasil-Argentina",
-        duracion: "4 meses por nivel",
-        link: "https://www.icba.org.ar/"
-      },
-      {
-        nombre: "Francés",
-        institucion: "Alliance Française Buenos Aires",
-        duracion: "4 meses por nivel",
-        link: "https://www.alianzafrancesa.org.ar/"
-      },
-      {
-        nombre: "Italiano",
-        institucion: "Dante Alighieri Argentina",
-        duracion: "4 meses por nivel",
-        link: "https://www.ladante.com.ar/"
-      },
-      {
-        nombre: "Alemán",
-        institucion: "Goethe-Institut Argentina",
-        duracion: "4 meses por nivel",
-        link: "https://www.goethe.de/ins/ar/es/"
-      }
-    ]
+    ],
   },
   {
-    id: 6,
-    area: "Educación",
-    icono: "bi-mortarboard-fill",
-    color: "#fb923c",
-    descripcion: "Formación docente, inclusión educativa, neuroeducación y tecnología educativa.",
+    id: "diplomaturas",
+    area: "Diplomaturas de Posgrado",
+    icono: "bi-award-fill",
+    color: "#6366f1",
+    descripcion: "Diplomaturas universitarias de posgrado a distancia de la UNLP.",
     cursos: [
       {
-        nombre: "Formación Docente en Entornos Virtuales",
-        institucion: "FLACSO Argentina",
-        duracion: "5 meses",
-        link: "https://www.flacso.org.ar/"
+        nombre: "Diplomatura de Posgrado en Economía y Sociedad del Agro Contemporáneo",
+        institucion: "UNLP – Fac. de Ciencias Agrarias y Forestales",
+        duracion: "Virtual",
+        link: "https://www.agro.unlp.edu.ar/posgrado/secretaria-de-posgrado-y-capacitacion-a-distancia/diplomatura-de-posgrado-en-economia-y-sociedad-del-agro-contemporaneo/",
       },
       {
-        nombre: "Inclusión Educativa",
-        institucion: "Universidad Nacional de Quilmes (UNQ)",
-        duracion: "4 meses",
-        link: "https://www.unq.edu.ar/"
+        nombre: "Diplomatura de Posgrado en Agua y Ambiente",
+        institucion: "UNLP – Fac. de Ciencias Agrarias y Forestales",
+        duracion: "A distancia",
+        link: "https://www.agro.unlp.edu.ar/posgrado/secretaria-de-posgrado-y-capacitacion-a-distancia/diplomatura-de-posgrado-en-agua-y-ambiente/",
       },
       {
-        nombre: "Neuroeducación",
-        institucion: "Universidad Siglo 21",
-        duracion: "3 meses",
-        link: "https://21.edu.ar/"
+        nombre: "Diplomatura: Legaltech e Inteligencia Artificial",
+        institucion: "UNLP – Fac. de Ciencias Jurídicas y Sociales",
+        duracion: "A distancia",
+        link: "https://www.jursoc.unlp.edu.ar/index.php/posgrado/item/4349-diplomatura-legaltech-e-inteligencia-artificial.html",
       },
       {
-        nombre: "Tecnología Educativa",
-        institucion: "FLACSO Argentina",
-        duracion: "6 meses",
-        link: "https://www.flacso.org.ar/"
+        nombre: "Diplomatura de Posgrado en Inteligencia Artificial Generativa",
+        institucion: "UNLP – Fac. de Informática",
+        duracion: "A distancia",
+        link: "https://postgrado.info.unlp.edu.ar/diplomatura-en-inteligencia-artificial-generativa/",
       },
       {
-        nombre: "Educación Inicial y Primera Infancia",
-        institucion: "Universidad Nacional de La Plata (UNLP)",
-        duracion: "4 meses",
-        link: "https://www.unlp.edu.ar/"
-      }
-    ]
-  }
+        nombre: "Diplomatura de Posgrado en Bienestar y Seguridad Perioperatoria",
+        institucion: "UNLP – Fac. de Ciencias Médicas",
+        duracion: "A distancia",
+        link: "https://www.med.unlp.edu.ar/index.php/postgrado-2",
+      },
+      {
+        nombre: "Diplomado de Posgrado en Didáctica de la Alfabetización Inicial",
+        institucion: "UNLP – Fac. de Humanidades y Cs. de la Educación",
+        duracion: "A distancia",
+        link: "https://www.fahce.unlp.edu.ar/facultad/secretarias-y-prosecretarias/posgrado/diplomatura/diplomatura-de-posgrado-en-didactica-de-la-alfabetizacion-inicial",
+      },
+      {
+        nombre: "Diplomatura en Ciencia de Datos",
+        institucion: "UNLP – Fac. de Humanidades y Cs. de la Educación",
+        duracion: "A distancia",
+        link: "https://www.fahce.unlp.edu.ar/facultad/secretarias-y-prosecretarias/posgrado/noticias/abierta-la-inscripcion-para-la-nueva-diplomatura-en-ciencia-de-datos",
+      },
+      {
+        nombre: "Diplomatura de Postgrado en Litigación Adversarial y Manejo de Evidencia",
+        institucion: "UNLP – Fac. de Ciencias Jurídicas y Sociales",
+        duracion: "Sincrónica",
+        link: "https://www.jursoc.unlp.edu.ar/index.php/posgrado/item/4836-diplomatura-litigacion-adversarial-y-manejo-de-evidencia.html",
+      },
+      {
+        nombre: "Diplomatura de Postgrado en Derecho Procesal de Familia",
+        institucion: "UNLP – Fac. de Ciencias Jurídicas y Sociales",
+        duracion: "Sincrónica",
+        link: "https://www.jursoc.unlp.edu.ar/index.php/posgrado/item/4352-diplomatura-derecho-procesal-de-familia.html",
+      },
+      {
+        nombre: "Diplomatura de Postgrado en Derecho Sucesorio",
+        institucion: "UNLP – Fac. de Ciencias Jurídicas y Sociales",
+        duracion: "Sincrónica",
+        link: "https://www.jursoc.unlp.edu.ar/index.php/posgrado/item/4351-diplomatura-derecho-sucesorio.html",
+      },
+    ],
+  },
 ];
 
 export default cursosData;

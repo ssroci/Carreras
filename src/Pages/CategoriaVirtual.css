@@ -1,15 +1,13 @@
-
-.presencial-container {
+.carreras-container {
   min-height: 100vh;
   background: #f7f7f7;
   color: #0a0a0a;
   padding: 64px 48px 80px;
   box-sizing: border-box;
   position: relative;
-  text-align: center;
 }
 
-.presencial-container::before {
+.carreras-container::before {
   content: '';
   position: fixed;
   inset: 0;
@@ -23,60 +21,25 @@
 /* ===========================
    TÍTULO
    =========================== */
-.titulo {
+.titulo-principal {
   font-size: clamp(40px, 6vw, 68px);
   font-weight: 800;
   letter-spacing: -3px;
   line-height: 1;
-  margin: 50px 0 48px 0;
+  margin: 0 0 48px 0;
   position: relative;
   z-index: 1;
   color: #0a0a0a;
-}
-
-.titulo span {
-  color: #e94560;
-  font-style: italic;
-}
-
-/* ===========================
-   BUSCADOR
-   =========================== */
-.buscador {
-  position: relative;
-  z-index: 1;
-  margin-bottom: 8px;
-  display: flex;
-  justify-content: center;
-}
-
-.buscador input {
-  width: 100%;
-  max-width: 480px;
-  padding: 13px 18px;
-  background: #fff;
-  border: 1.5px solid #e0e0e0;
-  border-radius: 12px;
-  font-size: 15px;
-  color: #0a0a0a;
-  box-sizing: border-box;
-  outline: none;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
-}
-
-.buscador input:focus {
-  border-color: #e94560;
-  box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.1);
 }
 
 /* ===========================
    CONTADOR
    =========================== */
 .contador {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 300;
   color: rgb(90, 90, 90);
-  margin: 0 0 24px 0;
+  margin: 0 0 36px 0;
   position: relative;
   z-index: 1;
 }
@@ -86,61 +49,40 @@
   font-weight: 300;
   color: rgb(90, 90, 90);
   text-align: center;
-  padding: 40px 0;
+  padding: 60px 0;
   position: relative;
   z-index: 1;
 }
 
 /* ===========================
-   GRID DE CATEGORÍAS
+   BUSCADOR
    =========================== */
-.categorias {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
+.buscador {
   position: relative;
   z-index: 1;
-  margin-top: 35px;
-  text-align: left;
+  margin-bottom: 8px;
+}
+
+.buscador input {
+  width: 100%;
+  max-width: 480px;
+  padding: 12px 18px;
+  background: #fff;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 15px;
+  color: #0a0a0a;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.25s ease;
+}
+
+.buscador input:focus {
+  border-color: #4fc3f7;
 }
 
 /* ===========================
-   CARD DE CATEGORÍA
-   =========================== */
-.categoria-card {
-  background: #181c28;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 18px;
-  padding: 40px 28px;
-  color: #fff;
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  text-decoration: none;
-  text-align: center;
-  transition: border-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
-  animation: fadeUp 0.4s ease both;
-}
-
-.categoria-card:hover {
-  border-color: #e94560;
-  color: #e94560;
-  transform: translateY(-6px);
-}
-
-.categoria-card:nth-child(1) { animation-delay: 0.04s; }
-.categoria-card:nth-child(2) { animation-delay: 0.08s; }
-.categoria-card:nth-child(3) { animation-delay: 0.12s; }
-.categoria-card:nth-child(4) { animation-delay: 0.16s; }
-.categoria-card:nth-child(5) { animation-delay: 0.20s; }
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(18px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* ===========================
-   GRID DE RESULTADOS
+   GRID
    =========================== */
 .carreras-grid {
   display: grid;
@@ -148,12 +90,10 @@
   gap: 20px;
   position: relative;
   z-index: 1;
-  margin-top: 8px;
-  text-align: left;
 }
 
 /* ===========================
-   CARD DE CARRERA
+   CARD
    =========================== */
 .carrera-card {
   background: #181c28;
@@ -169,13 +109,19 @@
 }
 
 .carrera-card:hover {
-  border-color: #e94560;
+  border-color: #4fc3f7;
   transform: translateY(-4px);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .carrera-card h2 {
   font-size: 16px;
   font-weight: 700;
+  letter-spacing: -0.3px;
   color: #fff;
   margin: 0;
   line-height: 1.3;
@@ -191,37 +137,54 @@
 
 .duracion {
   font-size: 13px;
+  font-weight: 300;
   color: rgba(255, 255, 255, 0.65);
   margin: 0;
 }
 
 .duracion strong {
-  color: #e94560;
+  color: #4fc3f7;
   font-weight: 500;
 }
 
 /* ===========================
-   UNIVERSIDADES
+   UNIVERSIDADES TOGGLE
    =========================== */
-.universidades {
+.universidades-container {
   margin-top: 8px;
   padding-top: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.toggle-universidades {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 7px 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.toggle-universidades:hover {
+  background: rgba(79, 195, 247, 0.12);
+  border-color: #4fc3f7;
+  color: #4fc3f7;
+}
+
+.universidades {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  margin-top: 10px;
 }
 
-.universidades h4 {
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: rgba(255, 255, 255, 0.35);
-  margin: 0 0 4px;
-}
-
-.universidad-link {
+.universidades a {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.75);
   text-decoration: none;
@@ -229,37 +192,28 @@
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.06);
   background: rgba(255, 255, 255, 0.04);
-  transition: background 0.25s, border-color 0.25s, color 0.25s;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
   line-height: 1.4;
 }
 
-.universidad-link:hover {
-  background: rgba(233, 69, 96, 0.15);
-  border-color: #e94560;
-  color: #e94560;
+.universidades a:hover {
+  background: rgba(79, 195, 247, 0.15);
+  border-color: #4fc3f7;
+  color: #4fc3f7;
 }
 
 /* ===========================
    RESPONSIVE
    =========================== */
 @media (max-width: 768px) {
-  .presencial-container {
+  .carreras-container {
     padding: 48px 24px 60px;
   }
 
-  .titulo {
+  .titulo-principal {
     font-size: clamp(36px, 10vw, 52px);
     letter-spacing: -2px;
-  }
-
-  .categorias {
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-  }
-
-  .categoria-card {
-    font-size: 18px;
-    padding: 30px 20px;
+    margin-bottom: 40px;
   }
 
   .carreras-grid {
