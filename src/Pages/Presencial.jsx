@@ -9,11 +9,16 @@ import { unlpCarreras } from "../Data/Presencial/unlp";
 import { uncomaData } from "../Data/Presencial/uncomaData";
 import { ufloCarreras } from "../Data/Presencial/uflo";
 import { ucasalCarreras } from "../Data/Presencial/ucasal";
-
+import { us21Data } from "../Data/Presencial/siglo21";
 import { uncCarreras } from "../Data/Presencial/unc";
+import {unroData} from "../Data/Presencial/unro"
+import { iupaData } from "../Data/Presencial/iupa";
+import { unslData } from "../Data/Presencial/sanluis";
+import { umData } from "../Data/Presencial/um";
 import Buscador from "../Components/Buscador";
 
 import "./Presencial.css";
+
 
 // Unificamos todos los arrays en uno solo
 const areasData = [
@@ -26,7 +31,12 @@ const areasData = [
   ...ufloCarreras,
   ...ucasalCarreras,
   ...ubaCarreras,
-  ...uncCarreras
+  ...uncCarreras, 
+  ...unroData,
+  ...us21Data,
+  ...iupaData,
+  ...unslData,
+  ...umData
 ];
 
 function Presencial() {
