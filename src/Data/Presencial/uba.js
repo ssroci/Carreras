@@ -7,10 +7,10 @@
 // Con link directo a la página de cada carrera o facultad si no hay URL independiente.
 
 export const ubaCarreras = [
-  // Facultad de Agronomía
+
   {
     nombre: "Agronomía",
-    tipo: "Ingeniería",
+    tipo: "Otras",
     duracion: 5,
     descripcion: "Producción agrícola, manejo de suelos, cultivos y sistemas agropecuarios.",
     universidades: [
@@ -316,7 +316,7 @@ export const ubaCarreras = [
 },
 {
   nombre: "Biotecnología",
-  tipo: "Licenciatura",
+  tipo: "Otras",
   duracion: 5,
   descripcion: "Aplicación de técnicas biológicas y tecnológicas.",
   universidades: [
@@ -331,7 +331,7 @@ export const ubaCarreras = [
 },
 {
   nombre: "Ciencias de Datos",
-  tipo: "Licenciatura",
+  tipo: "Otras",
   duracion: 5,
   descripcion: "Análisis avanzado de datos y técnicas estadísticas computacionales.",
   universidades: [
@@ -346,7 +346,7 @@ export const ubaCarreras = [
 },
 {
   nombre: "Ciencias de la Atmósfera",
-  tipo: "Licenciatura",
+  tipo: "Otras",
   duracion: 5,
   descripcion: "Estudio de la atmósfera y los fenómenos meteorológicos.",
   universidades: [
@@ -361,7 +361,7 @@ export const ubaCarreras = [
 },
 {
   nombre: "Ciencias Geológicas",
-  tipo: "Licenciatura",
+  tipo: "Otras",
   duracion: 5,
   descripcion: "Formación en geología estructural y de recursos naturales.",
   universidades: [
@@ -376,7 +376,7 @@ export const ubaCarreras = [
 },
 {
   nombre: "Ciencia y Tecnología de Alimentos",
-  tipo: "Licenciatura",
+  tipo: "Otras",
   duracion: 5,
   descripcion: "Procesos alimentarios y control de calidad de alimentos.",
   universidades: [
@@ -391,7 +391,7 @@ export const ubaCarreras = [
 },
 {
   nombre: "Oceanografía",
-  tipo: "Licenciatura",
+  tipo: "Otras",
   duracion: 5,
   descripcion: "Estudio de los océanos, ecosistemas y procesos marinos.",
   universidades: [
@@ -406,7 +406,7 @@ export const ubaCarreras = [
 },
 {
   nombre: "Paleontología",
-  tipo: "Licenciatura",
+  tipo: "Otras",
   duracion: 5,
   descripcion: "Estudio de restos fósiles y evolución de organismos antiguos.",
   universidades: [

@@ -257,7 +257,7 @@ export const umData = [
   },
   {
     nombre: "Bioingeniería",
-    tipo: "Ingeniería",
+    tipo: "Otras",
     duracion: 5,
     descripcion: "Carrera interdisciplinaria que aplica principios de ingeniería a sistemas biológicos y médicos, orientada al diseño de equipos, instrumentación y tecnologías en salud.",
     universidades: [

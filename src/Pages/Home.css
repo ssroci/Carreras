@@ -5,9 +5,8 @@ html, body, #root {
   padding: 0;
   min-height: 100vh;
   background: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'DM Sans', sans-serif;
 }
-
 
 .home {
   min-height: 100vh;
@@ -18,16 +17,6 @@ html, body, #root {
   text-align: center;
 }
 
-
-.home h1,
-.subtitulo,
-.tipos {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
 .home::before {
   content: '';
   position: fixed;
@@ -36,166 +25,152 @@ html, body, #root {
     radial-gradient(ellipse at 15% 15%, rgba(233, 69, 96, 0.07) 0%, transparent 55%),
     radial-gradient(ellipse at 85% 85%, rgba(79, 195, 247, 0.07) 0%, transparent 55%);
   pointer-events: none;
-  z-index: 0;
 }
 
+/* TITULO */
 
 .home h1 {
-  font-size: clamp(56px, 8vw, 100px);
+  font-size: 105px;
   font-weight: 600;
-  line-height: 1.02;
+  line-height: 1.05;
   letter-spacing: -3px;
-  margin: 0 0 28px 0;
-  position: relative;
-  z-index: 1;
-  font-size: 70px;
+  margin-bottom: 25px;
 }
 
 .argentina {
   color: #4fc3f7;
 }
 
-.home h1 .accent {
-  color: #e94560;
-  font-style: italic;
-  text-align: center;
-  display: flex;
-}
-
+/* SUBTITULO */
 
 .subtitulo {
-  font-size: 17px;
-  font-weight: 200;
+  font-size: 20px;
+  font-weight: 300;
   color: rgb(66, 66, 66);
-  line-height: 1.65;
-  margin: 0 0 64px 0;
-  position: relative;
-  z-index: 1;
+  line-height: 1.7;
   text-align: center;
+      max-width: 1200px;   /* un poco más largo que 720 */
+  margin: 0 auto 50px auto;
 }
 
+/* SECCIONES */
 
-/* ── Secciones ── */
 .seccion {
-  position: relative;
-  z-index: 1;
-  margin-bottom: 60px;
+  margin-bottom: 65px;
 }
 
 .seccion-titulo {
   font-size: 22px;
   font-weight: 600;
-  letter-spacing: 1px;
   text-transform: uppercase;
-  color: #0a0a0a;
   text-align: left;
-  margin: 0 0 0 4px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgba(0,0,0,0.08);
   padding-bottom: 10px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
 }
 
+/* GRID DE CARDS */
 
-/* ── Cards grid ── */
 .tipos {
-  display: grid;
-  gap: 20px;
-  position: relative;
-  z-index: 1;
-  margin-top: 28px;
-}
-
-/* Carreras: 2 columnas | Cursos: 1 columna centrada */
-.seccion:nth-child(3) .tipos {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.seccion:nth-child(4) .tipos {
-  grid-template-columns: minmax(0, 480px);
+  display: flex;
   justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
 }
+
+/* LINKS */
 
 .tipos a {
   text-decoration: none;
 }
 
+/* CARDS */
+
 .tipos button {
-  width: 100%;
-  padding: 40px 30px 36px;
+
   background: #181c28;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 18px;
-  color: #fff;
+
+  color: white;
 
   font-size: 34px;
   font-weight: 700;
-  letter-spacing: -0.5px;
-  cursor: pointer;
+
+  padding: 50px 30px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 18px;
 
-  transition: border-color 0.3s ease, transform 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
 }
+
+/* ICONOS */
 
 .tipos button i {
   font-size: 48px;
-  font-style: normal;
-  display: flex;
-  justify-content: center;
-  order: -1;
-  line-height: 1;
 }
 
+/* TAMAÑOS */
 
-/* Colores de íconos */
-.tipos a:nth-child(1) button i { color: #e94560; }
-.tipos a:nth-child(2) button i { color: #4fc3f7; }
+/* UNIVERSIDADES (larga) */
 
-/* Hover: borde y texto */
-.tipos a:nth-child(1) button:hover {
+.universidades {
+  width: 720px;
+}
+
+/* PRESENCIAL y DISTANCIA */
+
+.presencial,
+.distancia {
+  width: 340px;
+}
+
+/* CURSOS (larga) */
+
+.cursos {
+  width: 720px;
+}
+
+/* COLORES DE ICONOS */
+
+.universidades i {
+  color: #7c5cff;
+}
+
+.presencial i {
+  color: #e94560;
+}
+
+.distancia i {
+  color: #4fc3f7;
+}
+
+.cursos i {
+  color: #f5a623;
+}
+
+/* HOVER */
+
+.universidades:hover {
+  border-color: #7c5cff;
+  color: #7c5cff;
+  transform: translateY(-6px);
+}
+
+.presencial:hover {
   border-color: #e94560;
   color: #e94560;
   transform: translateY(-6px);
 }
-.tipos a:nth-child(2) button:hover {
+
+.distancia:hover {
   border-color: #4fc3f7;
   color: #4fc3f7;
-  transform: translateY(-6px);
-}
-
-
-.seccion:nth-child(4) .tipos a:nth-child(1) button i { color: #f5a623; }
-.seccion:nth-child(4) .tipos a:nth-child(1) button:hover {
-  border-color: #f5a623;
-  color: #f5a623;
-  transform: translateY(-6px);
-}
-
-
-@media (max-width: 768px) {
-  .home {
-    padding: 48px 24px 60px;
-  }
-
-  .home h1 {
-    font-size: clamp(44px, 12vw, 64px);
-    letter-spacing: -2px;
-  }
-
-  .seccion:nth-child(3) .tipos,
-  .seccion:nth-child(4) .tipos {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-
-  .tipos button {
-    font-size: 28px;
-    padding: 30px 24px;
-  }
+  transform: translateY
 }

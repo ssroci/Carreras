@@ -199,7 +199,7 @@ export const us21Data = [
   },
   {
     nombre: "Licenciatura en Fonoaudiología",
-    tipo: "Otras",
+    tipo: "Licenciatura",
     duracion: 4,
     descripcion: "Formación en evaluación y tratamiento de trastornos del habla, lenguaje, voz y audición en distintas etapas del ciclo vital.",
     universidades: [
@@ -229,7 +229,7 @@ export const us21Data = [
   },
   {
     nombre: "Licenciatura en Instrumentación Quirúrgica",
-    tipo: "Otras",
+    tipo: "Licenciatura",
     duracion: 4,
     descripcion: "Formación para la asistencia técnica en cirugías, manejo de instrumental quirúrgico y gestión del área de central de esterilización.",
     universidades: [
@@ -244,7 +244,7 @@ export const us21Data = [
   },
   {
     nombre: "Licenciatura en Kinesiología y Fisioterapia",
-    tipo: "Otras",
+    tipo: "Licenciatura",
     duracion: 4,
     descripcion: "Formación en evaluación, diagnóstico kinésico y rehabilitación funcional en áreas clínica, deportiva, neurológica y respiratoria.",
     universidades: [
@@ -259,7 +259,7 @@ export const us21Data = [
   },
   {
     nombre: "Licenciatura en Nutrición",
-    tipo: "Otras",
+    tipo: "Licenciatura",
     duracion: 4,
     descripcion: "Formación en alimentación humana, evaluación nutricional, dietoterapia y promoción de la salud en contextos clínicos y comunitarios.",
     universidades: [
@@ -274,7 +274,7 @@ export const us21Data = [
   },
   {
     nombre: "Licenciatura en Producción de Bioimágenes",
-    tipo: "Otras",
+    tipo: "Licenciatura",
     duracion: 4,
     descripcion: "Formación en diagnóstico por imágenes, radiología, ecografía, resonancia magnética y tomografía para el área de la salud.",
     universidades: [

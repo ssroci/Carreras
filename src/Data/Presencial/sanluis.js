@@ -1,6 +1,5 @@
 export const unslData = [
 
-  // ─── OTRAS PROFESIONES ────────────────────────────────────────────────────────
 
   {
     nombre: "Abogacía",
@@ -588,7 +587,7 @@ export const unslData = [
   },
   {
     nombre: "Licenciatura en Enfermería",
-    tipo: "Otras",
+    tipo: "Licenciatura",
     duracion: 5,
     descripcion: "Formación avanzada en cuidado integral de la salud, gestión de servicios de enfermería e investigación en ciencias de la salud.",
     universidades: [
@@ -618,7 +617,7 @@ export const unslData = [
   },
   {
     nombre: "Licenciatura en Fonoaudiología",
-    tipo: "Otras",
+    tipo: "Licenciatura",
     duracion: 5,
     descripcion: "Formación en evaluación y tratamiento de trastornos del habla, lenguaje, voz y audición en distintas etapas del ciclo vital.",
     universidades: [
@@ -663,7 +662,7 @@ export const unslData = [
   },
   {
     nombre: "Licenciatura en Kinesiología y Fisiatría",
-    tipo: "Otras",
+    tipo: "Licenciatura",
     duracion: 5,
     descripcion: "Formación en evaluación y rehabilitación funcional kinésica en ámbitos clínico, deportivo, neurológico y respiratorio.",
     universidades: [
@@ -678,7 +677,7 @@ export const unslData = [
   },
   {
     nombre: "Licenciatura en Nutrición",
-    tipo: "Otras",
+    tipo: "Licenciatura",
     duracion: 5,
     descripcion: "Formación en nutrición humana, dietoterapia, evaluación nutricional y promoción de la salud en contextos clínicos y comunitarios.",
     universidades: [

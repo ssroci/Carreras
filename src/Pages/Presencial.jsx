@@ -15,6 +15,7 @@ import {unroData} from "../Data/Presencial/unro"
 import { iupaData } from "../Data/Presencial/iupa";
 import { unslData } from "../Data/Presencial/sanluis";
 import { umData } from "../Data/Presencial/um";
+import { carrerasUCA } from "../Data/Presencial/uca";
 import Buscador from "../Components/Buscador";
 
 import "./Presencial.css";
@@ -36,12 +37,13 @@ const areasData = [
   ...us21Data,
   ...iupaData,
   ...unslData,
-  ...umData
+  ...umData,
+  ...carrerasUCA
 ];
 
 function Presencial() {
   const [busqueda, setBusqueda] = useState("");
-
+console.log("UCA cargado:", carrerasUCA.length);
   const categorias = ["Licenciatura", "Tecnicatura", "Ingeniería", "Profesorado", "Otras"];
 
   const resultados = busqueda

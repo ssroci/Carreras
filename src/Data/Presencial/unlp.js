@@ -16,21 +16,7 @@ export const unlpCarreras = [
       }
     ]
   },
-  {
-    nombre: "Medicina",
-    tipo: "Otras",
-    duracion: 6,
-    descripcion: "Formación médica integral.",
-    universidades: [
-      {
-        nombre: "Universidad Nacional de La Plata",
-        sigla: "UNLP",
-        ciudad: "La Plata",
-        provincia: "Buenos Aires",
-        link: "https://unlp.edu.ar/carrera/medicina/"
-      }
-    ]
-  },
+
   {
     nombre: "Profesorado en Educación Física",
     tipo: "Profesorado",
