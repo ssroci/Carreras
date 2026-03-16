@@ -1,5 +1,6 @@
 import "./Universidades.css";
-import universidades from "../Data/Universidad/Universidades";
+import { Link } from "react-router-dom";
+import UniversidadUnion from "../Data/Universidad/Universidades";
 
 function Universidades() {
   return (
@@ -9,13 +10,24 @@ function Universidades() {
 
       <div className="universidades-grid">
 
-        {universidades.map((uni, index) => (
-          <div key={index} className="universidad-wrapper">
+        {UniversidadUnion.map((uni, index) => (
+          <Link
+            to={`/universidad/${uni.id}`}
+            key={index}
+            className="universidad-wrapper"
+          >
             <div className="universidad-card">
-              <img src={uni.logo} alt={uni.nombre} className="universidad-logo" />
+              <img
+                src={uni.logo}
+                alt={uni.nombre}
+                className="universidad-logo"
+              />
             </div>
-            <span className="universidad-nombre">{uni.nombre}</span>
-          </div>
+
+            <span className="universidad-nombre">
+              {uni.nombre}
+            </span>
+          </Link>
         ))}
 
       </div>

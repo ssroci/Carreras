@@ -7,6 +7,7 @@ import Cursos from "./Pages/Cursos";
 import Categoria from "./Pages/Categoria";
 import CategoriaVirtual from "./Pages/CategoriaVirtual";
 import Universidades from "./Pages/Universidades";
+import UniversidadesDetalle from "./Pages/UniversidadesDetalle";
 
 function AppRoutes() {
   const location = useLocation();
@@ -16,15 +17,12 @@ function AppRoutes() {
       <Header />
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
-
         <Route path="/universidades" element={<Universidades />} />
-
+        <Route path="/universidad/:id" element={<UniversidadesDetalle />} />
         <Route path="/presencial" element={<Presencial />} />
         <Route path="/presencial/:tipo" element={<Categoria />} />
-
         <Route path="/virtual" element={<Virtual />} />
         <Route path="/virtual/:categoria" element={<CategoriaVirtual />} />
-
         <Route path="/cursos" element={<Cursos />} />
       </Routes>
     </>
