@@ -27,27 +27,30 @@
 /* Card con borde */
 .universidad-card {
   padding: 15px;
-  border: 2px solid #ccc;
+  border: 2px solid #c4c2c2c5;
   border-radius: 12px;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
+  
   cursor: pointer;
   transition: transform 0.25s ease, border-color 0.25s ease;
+  
 }
 
 /* Hover: elevación y borde azul */
 .universidad-card:hover {
   transform: translateY(-5px);
   border-color: #4fc3f7;
+ 
 }
 
 /* Logo dentro de la card */
 .universidad-logo {
-  max-width: 100%;
-  max-height: 80px;
+   width: 150px;
+  height: 70px;
+  
   object-fit: contain;
 }
 

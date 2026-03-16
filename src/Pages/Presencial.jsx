@@ -12,7 +12,7 @@ import { ucasalCarreras } from "../Data/Presencial/ucasal";
 import { us21Data } from "../Data/Presencial/siglo21";
 import { uncCarreras } from "../Data/Presencial/unc";
 import {unroData} from "../Data/Presencial/unro"
-import { iupaData } from "../Data/Presencial/iupa";
+
 import { unslData } from "../Data/Presencial/sanluis";
 import { umData } from "../Data/Presencial/um";
 import { carrerasUCA } from "../Data/Presencial/uca";
@@ -35,7 +35,6 @@ const areasData = [
   ...uncCarreras, 
   ...unroData,
   ...us21Data,
-  ...iupaData,
   ...unslData,
   ...umData,
   ...carrerasUCA
