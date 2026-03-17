@@ -59,4 +59,20 @@ export const carrerasUNRN = [
   "Ciclo de Profesorado de Enseñanza de Nivel Medio y Superior en Química - Virtual - Virtual|https://www.unrn.edu.ar/carreras/Ciclo-de-Profesorado-de-Ensenanza-de-Nivel-Medio-y-Superior-en-Quimica-56",
   "Ciclo de Profesorado de Enseñanza de Nivel Medio y Superior en Biología - Virtual - Virtual|https://www.unrn.edu.ar/carreras/Ciclo-de-Profesorado-de-Ensenanza-de-Nivel-Medio-y-Superior-en-Biologia-53",
 
+// POSGRA"PosgraDOS – UNRN
+ 
+"Doctorado de la UNRN – Mención en Arquitectura - Varias sedes - Posgrado|https://www.unrn.edu.ar/section/66/posgrados.html",
+"Doctorado de la UNRN – Mención en Ciencias de la Tierra - Varias sedes - Posgrado|https://www.unrn.edu.ar/section/66/posgrados.html",
+"Doctorado en Políticas Públicas, Gobierno e Innovación - Varias sedes - Posgrado|https://www.unrn.edu.ar/section/66/posgrados.html",
+"Doctorado en Ciencias Sociales y Humanidades - Varias sedes - Posgrado|https://www.unrn.edu.ar/section/66/posgrados.html",
+"Doctorado en Ciencias Exactas y Naturales - Varias sedes - Posgrado|https://www.unrn.edu.ar/section/66/posgrados.html",
+"Maestría en Ciencia, Tecnología e Innovación - Varias sedes - Posgrado|https://www.unrn.edu.ar/section/66/posgrados.html",
+"Especialización en Odontopediatría - Varias sedes - Posgrado|https://www.unrn.edu.ar/section/66/posgrados.html",
+"Especialización en Agronegocios - Varias sedes - Posgrado|https://www.unrn.edu.ar/section/66/posgrados.html",
+"Especialización en Estudios de Género para la Intervención Profesional - Varias sedes - Posgrado|https://www.unrn.edu.ar/section/66/posgrados.html",
+"Especialización en Peritajes Antropológicos - Varias sedes - Posgrado|https://www.unrn.edu.ar/section/66/posgrados.html",
+"Especialización en Contabilidad y Auditoría - Varias sedes - Posgrado|https://www.unrn.edu.ar/section/66/posgrados.html",
+"Especialización en Ciencia de Datos Aplicada - Varias sedes - Posgrado|https://www.unrn.edu.ar/section/66/posgrados.html",
+"Doctorado en Educación Superior Universitaria - Varias sedes - Posgrado|https://www.unrn.edu.ar/section/66/posgrados.html",
+
 ];
