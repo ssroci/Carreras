@@ -1,0 +1,91 @@
+/* CONTENIDO DE LA PÁGINA */
+.contenido {
+  max-width: 750px;
+  margin: 30px auto 20px auto;
+  padding: 0 20px;
+}
+
+/* TÍTULO */
+
+
+/* BUSCADOR LINDO */
+
+/* CONTENEDOR DEL BUSCADOR + TITULO */
+.filtro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+}
+
+/* TÍTULO CENTRADO */
+.titulo {
+  text-align: center;
+  font-size: 70px;
+  margin-bottom: 15px;
+}
+
+/* BUSCADOR CENTRADO Y LINDO */
+.buscador {
+  width: 100%;
+  max-width: 600px; /* 👈 controla el ancho */
+  padding: 20px 80px;
+  border: 2px solid #3cb989;
+  border-radius: 10px;
+  font-size: 18px;
+  outline: none;
+  margin-bottom: 10px;
+  background-color: #f1f1f1f1;
+  margin-top: 50px;
+}
+
+/* RESULTADOS */
+
+.buscador:focus {
+  border-color: #3cb989;;
+}
+
+/* RESULTADOS */
+.resultados {
+  font-size: 13px;
+  color: #666;
+}
+
+/* LISTA CENTRADA */
+.lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* CARDS CORTAS */
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto 10px auto;
+  padding: 14px 16px;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  background: #fff;
+}
+
+/* TEXTO */
+.nombre-carrera {
+  font-size: 20px;
+}
+
+/* BOTÓN */
+.boton {
+  background: #3cb989;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.boton:hover {
+  background: #3cb989;;
+}

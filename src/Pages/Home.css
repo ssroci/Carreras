@@ -9,64 +9,70 @@ html, body, #root {
 }
 
 .home {
+  background: #fffffffb;
   min-height: 100vh;
-  background: #f7f7f7;
-  color: #0a0a0a;
-  padding: 72px 48px 80px;
-  box-sizing: border-box;
+  padding: 40px 20px;
+  color: rgb(8, 8, 8);
+
+}
+
+.hero{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+   text-align: center; /* centra título y subtítulo */
+  max-width: 1100px;   /* evita que el texto sea muy ancho */
+  margin: 0 auto;     /* centra el bloque en la pantalla */
+}
+
+.stats {
+  display: flex;
+  justify-content: center; /* centra horizontal */
+  align-items: center;
+  gap: 60px; /* espacio entre números */
+  margin-top: 40px;
+}
+
+
+.stat h2 {
+  font-size: 60px; /* 🔥 grande */
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+}
+
+.stat p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.stat {
   text-align: center;
 }
-
-.home::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at 15% 15%, rgba(233, 69, 96, 0.07) 0%, transparent 55%),
-    radial-gradient(ellipse at 85% 85%, rgba(79, 195, 247, 0.07) 0%, transparent 55%);
-  pointer-events: none;
-}
-
-/* TITULO */
-
-.home h1 {
-  font-size: 105px;
+.titulo-principal {
+  font-size: 70px;
   font-weight: 600;
   line-height: 1.05;
   letter-spacing: -3px;
   margin-bottom: 25px;
 }
-
+.seccion-titulo{
+  margin-left: 100px;
+  color: rgb(129, 129, 129);
+  font-size: 30px;
+  border-bottom: 1px solid rgb(180, 180, 180);
+}
 .argentina {
-  color: #4fc3f7;
+  font-size: 70px; /* más grande */
+  font-weight: 700;
+  color: #228ac7; /* opcional */
 }
-
-/* SUBTITULO */
-
-.subtitulo {
-  font-size: 20px;
-  font-weight: 300;
-  color: rgb(66, 66, 66);
-  line-height: 1.7;
-  text-align: center;
-      max-width: 1200px;   /* un poco más largo que 720 */
-  margin: 0 auto 50px auto;
-}
-
-/* SECCIONES */
-
-.seccion {
-  margin-bottom: 65px;
-}
-
-.seccion-titulo {
+.subtitulo{  margin-top: 15px;
   font-size: 22px;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-align: left;
-  margin-bottom: 20px;
-  border-bottom: 2px solid rgba(0,0,0,0.08);
-  padding-bottom: 10px;
+  color: #555;
+  line-height: 1.5;
 }
 
 /* GRID DE CARDS */
@@ -74,103 +80,130 @@ html, body, #root {
 .tipos {
   display: flex;
   justify-content: center;
-  gap: 22px;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
-/* LINKS */
-
-.tipos a {
+/* LINK */
+.card-link {
   text-decoration: none;
 }
 
-/* CARDS */
+/* CARD */
+.card {
+  position: relative;
+  width: 300px;
+  height: 300px;
 
-.tipos button {
+  border-radius: 20px;
 
-  background: #181c28;
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 18px;
 
+  text-align: center;
   color: white;
 
-  font-size: 34px;
-  font-weight: 700;
-
-  padding: 50px 30px;
+  overflow: hidden;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 18px;
 
-  cursor: pointer;
-
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
 }
 
-/* ICONOS */
-
-.tipos button i {
-  font-size: 48px;
-}
-
-/* TAMAÑOS */
-
-/* UNIVERSIDADES (larga) */
-
-.universidades {
-  width: 720px;
-}
-
-/* PRESENCIAL y DISTANCIA */
-
-.presencial,
-.distancia {
-  width: 340px;
-}
-
-/* CURSOS (larga) */
-
-.cursos {
-  width: 720px;
-}
-
-/* COLORES DE ICONOS */
-
-.universidades i {
-  color: #7c5cff;
-}
-
-.presencial i {
-  color: #e94560;
-}
-
-.distancia i {
-  color: #4fc3f7;
-}
-
-.cursos i {
-  color: #f5a623;
-}
-
 /* HOVER */
-
-.universidades:hover {
-  border-color: #7c5cff;
-  color: #7c5cff;
-  transform: translateY(-6px);
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
 }
 
-.presencial:hover {
-  border-color: #e94560;
-  color: #e94560;
-  transform: translateY(-6px);
+/* CÍRCULO BLANCO */
+.card-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+  z-index: 2;
 }
 
-.distancia:hover {
-  border-color: #4fc3f7;
-  color: #4fc3f7;
-  transform: translateY
+.card-circle i {
+  font-size: 30px;
+  color: #333;
+}
+
+/* TITULO */
+.card h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+/* TEXTO */
+.card p {
+  font-size: 20px;
+  opacity: 0.85;
+}
+
+/* EFECTO "BLOB" */
+.card::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+
+  top: -60px;
+  left: -60px;
+
+  filter: blur(30px);
+  opacity: 0.8;
+}
+
+/* COLORES */
+
+/* UNIVERSIDADES */
+.card.universidades {
+  background: linear-gradient(180deg, #6c5ce7, #5a4fcf);
+  padding: 30px 100px;
+}
+
+.card.universidades::before {
+  background: #a29bfe;
+}
+
+/* PRESENCIAL */
+.card.presencial {
+  background: linear-gradient(180deg, #fd79a8, #e84393);
+    padding: 30px 20px;
+}
+
+.card.presencial::before {
+  background: #ff9ff3;
+}
+
+/* DISTANCIA */
+.card.distancia {
+  background: linear-gradient(180deg, #00cec9, #00a8a3);
+  padding: 30px 20px;
+
+}
+
+.card.distancia::before {
+  background: #81ecec;
+
+}
+
+/* CURSOS */
+.card.cursos {
+  background: linear-gradient(180deg, #fdcb6e, #e17055);
+  padding: 30px 100px;
+}
+
+.card.cursos::before {
+  background: #ffeaa7;
 }
