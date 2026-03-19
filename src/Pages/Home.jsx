@@ -35,19 +35,24 @@ function Home() {
   return (
     <div className="home">
 
-      {/* HERO */}
-      <div className="hero">
-        <h1>
-  <span className="titulo-principal">Guía de carreras</span>
-  <span className="argentina">Argentina</span>
-</h1>
+   <div className="hero">
+  <div className="hero-content">
+    <h1>
+      <span className="titulo-principal">Guía de carreras</span>
+      <span className="argentina">Argentina</span>
+    </h1>
+    <p className="subtitulo">
+      Esta guía reúne información sobre carreras universitarias y universidades de Argentina.
+      Explora qué estudiar, descubre en qué instituciones se dicta cada carrera y encuentra
+      distintas modalidades de formación.
+    </p>
+  </div>
 
-        <p className="subtitulo">
-          Esta guía reúne información sobre carreras universitarias y universidades de Argentina.
-          Explora qué estudiar, descubre en qué instituciones se dicta cada carrera y encuentra
-          distintas modalidades de formación.
-        </p>
-      </div>
+  <div className="hero-imagen">
+    <img src="/logos/mapa.png" alt="Mapa de Argentina" />
+  </div>
+</div>
+
 
       {/* STATS */}
       <div className="stats">
@@ -117,7 +122,7 @@ function Home() {
                 <i className="bi bi-book"></i>
               </div>
               <h3>Cursos</h3>
-              <p>Capacitaciones y formación corta</p>
+              <p>Capacitaciones y formación a corto plazo</p>
             </div>
           </Link>
         </div>

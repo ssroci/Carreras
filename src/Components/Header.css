@@ -1,43 +1,89 @@
+/* ── HEADER ─────────────────────────────────────── */
+/* Fuente: agregar en index.html o index.css
+   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+*/
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background-color: #ebe7e7; 
-  font-family: Arial, Helvetica, sans-serif;
-margin: 0;
-  
-box-shadow: 0 4px 15px rgba(108, 81, 133, 0.253);
-
-  
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 1000;
+  left: 0;
+  right: 0;
+  z-index: 100;
 
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 64px;
+  padding: 0 48px;
+
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid #e5e7eb;
 }
 
-.bi-geo-alt-fill{
-    margin-left: 40px ;
-    color: #e70b0b;
-
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
+
 .logo a {
-  text-decoration: none;
-  font-weight: 700;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
   font-size: 18px;
-  color: #5a5a5a;
+  letter-spacing: -0.5px;
+  color: #0a0a0a;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.logo a:hover {
+  opacity: 0.7;
+}
+
+.logo .bi-geo-alt-fill {
+  color: #0062ff;
+  font-size: 16px;
+}
+
+/* NAV */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .nav-links a {
-  margin-left: 25px;
-  text-decoration: none;
-  color: #555;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
   font-weight: 500;
-  transition: color 0.3s;
+  color: #6b7280;
+  text-decoration: none;
+  padding: 7px 14px;
+  border-radius: 8px;
+  transition: background 0.15s, color 0.15s;
 }
 
 .nav-links a:hover {
-  color: #228ac7;
+  background: #f3f4f6;
+  color: #0a0a0a;
+}
+
+/* Link activo — podés activarlo con NavLink + className activo */
+.nav-links a.active {
+  background: #0a0a0a;
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 0 20px;
+  }
+  .nav-links a {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
 }
