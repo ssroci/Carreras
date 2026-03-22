@@ -2,7 +2,7 @@
 
 function Buscador({ setBusqueda }) {
   return (
-    <div className="buscador">
+    <div className="buscador-input-wrapper">
       <input
         type="text"
         placeholder="Buscar carrera..."

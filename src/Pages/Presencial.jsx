@@ -11,8 +11,7 @@ import { ufloCarreras } from "../Data/Presencial/uflo";
 import { ucasalCarreras } from "../Data/Presencial/ucasal";
 import { us21Data } from "../Data/Presencial/siglo21";
 import { uncCarreras } from "../Data/Presencial/unc";
-import {unroData} from "../Data/Presencial/unro"
-
+import { unroData } from "../Data/Presencial/unro";
 import { unslData } from "../Data/Presencial/sanluis";
 import { umData } from "../Data/Presencial/um";
 import { carrerasUCA } from "../Data/Presencial/uca";
@@ -20,29 +19,17 @@ import Buscador from "../Components/Buscador";
 
 import "./Presencial.css";
 
-
-// Unificamos todos los arrays en uno solo
 const areasData = [
-  ...unrnData,
-  ...utnCarreras,
-  ...unrcCarreras,
-  ...unluCarreras,
-  ...unlpCarreras,
-  ...uncomaData,
-  ...ufloCarreras,
-  ...ucasalCarreras,
-  ...ubaCarreras,
-  ...uncCarreras, 
-  ...unroData,
-  ...us21Data,
-  ...unslData,
-  ...umData,
-  ...carrerasUCA
+  ...unrnData, ...utnCarreras, ...unrcCarreras, ...unluCarreras,
+  ...unlpCarreras, ...uncomaData, ...ufloCarreras, ...ucasalCarreras,
+  ...ubaCarreras, ...uncCarreras, ...unroData, ...us21Data,
+  ...unslData, ...umData, ...carrerasUCA,
 ];
 
 function Presencial() {
   const [busqueda, setBusqueda] = useState("");
-console.log("UCA cargado:", carrerasUCA.length);
+  const [abierto, setAbierto] = useState(null);
+
   const categorias = ["Licenciatura", "Tecnicatura", "Ingeniería", "Profesorado", "Otras"];
 
   const resultados = busqueda
@@ -51,11 +38,26 @@ console.log("UCA cargado:", carrerasUCA.length);
         .sort((a, b) => a.nombre.localeCompare(b.nombre))
     : [];
 
+  const toggle = (nombre) => {
+    setAbierto(abierto === nombre ? null : nombre);
+  };
+
   return (
     <div className="presencial-container">
-      <h1 className="titulo">Carreras <span>Presenciales</span></h1>
 
-      <Buscador setBusqueda={setBusqueda} />
+      <div className="presencial-hero">
+        <h1 className="titulo-presencial">
+          Carreras <span className="color">Presenciales</span>
+        </h1>
+        <p className="presencial-subtitulo">
+          Buscá por nombre de carrera o explorá por categoría. Encontrá en qué
+          universidades se dicta y dónde cursarla.
+        </p>
+      </div>
+
+      <div className="presencial-search-area">
+        <Buscador setBusqueda={setBusqueda} />
+      </div>
 
       {busqueda && (
         <p className="contador">{resultados.length} carreras encontradas</p>
@@ -65,27 +67,45 @@ console.log("UCA cargado:", carrerasUCA.length);
         <p className="sin-resultados">No se encontraron carreras.</p>
       )}
 
+      {/* RESULTADOS ACCORDION */}
       {busqueda && resultados.length > 0 && (
-        <div className="carreras-grid">
+        <div className="accordion-lista">
           {resultados.map((c) => (
-            <div className="carrera-card" key={c.nombre}>
-              <h2>{c.nombre}</h2>
-              <p className="descripcion">{c.descripcion}</p>
-              <p className="duracion"><strong>Duración:</strong> {c.duracion} años</p>
-              {c.universidades && (
-                <div className="universidades">
-                  <h4>Universidades</h4>
-                  {c.universidades.map((uni, i) => (
-                    <a
-                      key={i}
-                      href={uni.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="universidad-link"
-                    >
-                      {uni.nombre} – {uni.ciudad}, {uni.provincia}
-                    </a>
-                  ))}
+            <div
+              className={`accordion-item ${abierto === c.nombre ? "abierto" : ""}`}
+              key={c.nombre}
+            >
+              <button className="accordion-header" onClick={() => toggle(c.nombre)}>
+                <div className="accordion-info">
+                  <span className="accordion-nombre">{c.nombre}</span>
+                  <span className="accordion-duracion">
+                    {c.duracion} años
+                  </span>
+                </div>
+                <span className="accordion-flecha">
+                  {abierto === c.nombre ? "↑" : "↓"}
+                </span>
+              </button>
+
+              {abierto === c.nombre && (
+                <div className="accordion-body">
+                  {c.descripcion && <p className="accordion-desc">{c.descripcion}</p>}
+                  {c.universidades && (
+                    <div className="accordion-unis">
+                      <h4>Universidades</h4>
+                      {c.universidades.map((uni, i) => (
+                        <a
+                          key={i}
+                          href={uni.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="accordion-uni-link"
+                        >
+                          {uni.nombre} – {uni.ciudad}, {uni.provincia}
+                        </a>
+                      ))}
+                    </div>
+                  )}
                 </div>
               )}
             </div>
@@ -93,10 +113,15 @@ console.log("UCA cargado:", carrerasUCA.length);
         </div>
       )}
 
+      {/* CATEGORÍAS */}
       {!busqueda && (
         <div className="categorias">
           {categorias.map((cat) => (
-            <Link key={cat} to={`/presencial/${cat.toLowerCase()}`} className="categoria-card">
+            <Link
+              key={cat}
+              to={`/presencial/${cat.toLowerCase()}`}
+              className="categoria-card"
+            >
               {cat}
             </Link>
           ))}

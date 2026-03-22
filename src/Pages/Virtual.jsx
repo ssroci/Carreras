@@ -15,33 +15,34 @@ function Virtual() {
     "Otras"
   ];
 
-  // Todas las carreras a distancia filtradas por búsqueda
   const carreras = areasVirtual
     .flatMap(area => area.carreras)
     .filter(c => c.nombre.toLowerCase().includes(busqueda.toLowerCase()));
 
- 
-
   return (
-    <div className="carreras-container">
+    <div className="virtual-container">
 
-      <h1 className="titulo-principal">
-        Carreras <span className="modalidad-azul">A Distancia</span>
-      </h1>
+      <div className="virtual-hero">
+        <h1 className="virtual-titulo">
+          Carreras <span>A Distancia</span>
+        </h1>
+      </div>
 
-      <Buscador setBusqueda={setBusqueda} />
+      <div className="virtual-search-area">
+        <Buscador setBusqueda={setBusqueda} />
+      </div>
 
-      <p className="contador">{carreras.length} carreras encontradas</p>
+      <p className="virtual-contador">{carreras.length} carreras encontradas</p>
 
-      <div className="categorias">
+      <div className="virtual-categorias">
         {categorias.map((cat, idx) => (
           <Link
             to={`/virtual/${cat.toLowerCase()}`}
             key={idx}
-            className="categoria-card-link"
+            className="virtual-categoria-link"
           >
-            <div className="categoria-card">
-              {cat} 
+            <div className="virtual-categoria-card">
+              {cat}
             </div>
           </Link>
         ))}
