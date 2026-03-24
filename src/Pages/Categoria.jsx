@@ -1,29 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
-
-import { unrnData } from "../Data/Presencial/Unrn";
-import { utnCarreras } from "../Data/Presencial/utn";
-import { unrcCarreras } from "../Data/Presencial/unrc";
-import { unluCarreras } from "../Data/Presencial/unlu";
-import { unlpCarreras } from "../Data/Presencial/unlp";
-import { uncomaData } from "../Data/Presencial/uncomaData";
-import { ufloCarreras } from "../Data/Presencial/uflo";
-import { ucasalCarreras } from "../Data/Presencial/ucasal";
-import { ubaCarreras } from "../Data/Presencial/uba";
-import { uncCarreras } from "../Data/Presencial/unc";
-
+import { todasPresenciales } from "../Data/Presencial/todasPresenciales";
 import Buscador from "../Components/Buscador";
 import { unificarCarreras } from "../utils/unificarCarreras";
-
 import "./Categoria.css";
 
-const todasCarreras = [
-  ...unrnData, ...utnCarreras, ...unrcCarreras, ...unluCarreras,
-  ...unlpCarreras, ...uncomaData, ...ufloCarreras, ...ucasalCarreras,
-  ...ubaCarreras, ...uncCarreras
-];
-
-const areasData = unificarCarreras(todasCarreras);
+const areasData = unificarCarreras(todasPresenciales);
 
 function Categoria() {
   const { tipo } = useParams();
@@ -32,7 +14,10 @@ function Categoria() {
 
   const carreras = areasData
     .filter((c) => c.tipo.toLowerCase() === tipo.toLowerCase())
-    .filter((c) => c.nombre.toLowerCase().includes(busqueda.toLowerCase()))
+    .filter((c) =>
+      c.nombre.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+      .includes(busqueda.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""))
+    )
     .sort((a, b) => a.nombre.localeCompare(b.nombre));
 
   const toggle = (nombre) => {

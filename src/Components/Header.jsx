@@ -7,7 +7,7 @@ function Header() {
   return (
     <header className="header">
       <div className="logo">
-        <Link to="/">Estudía en Argentina</Link>
+        <Link to="/">Estudiá en Argentina</Link>
         <i className="bi bi-geo-alt-fill"></i>
       </div>
       <nav className="nav-links">

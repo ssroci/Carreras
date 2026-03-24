@@ -22,7 +22,7 @@
 
 /* ── HERO ── */
 .hero {
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 96px 48px 64px;
 }
@@ -48,10 +48,10 @@
 }
 
 .subtitulo {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.75;
   color: rgb(77, 76, 76);
-  max-width: 580px;
+  max-width: 480px;
   font-weight: 300;
 }
 .hero {
@@ -67,7 +67,7 @@
 
 .hero-imagen {
   flex-shrink: 0;
-  width: 400px;
+  width: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,7 +127,7 @@
 
 /* ── SECCIONES ── */
 .seccion {
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 72px 48px;
   

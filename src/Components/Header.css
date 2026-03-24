@@ -9,7 +9,7 @@
   left: 0;
   right: 0;
   z-index: 100;
-
+font-family: sans-serif, Tahoma;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -32,7 +32,7 @@
 
 .logo a {
   font-family: 'Syne', sans-serif;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 18px;
   letter-spacing: -0.5px;
   color: #0a0a0a;
@@ -58,7 +58,7 @@
 
 .nav-links a {
   font-family: 'DM Sans', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   color: #6b7280;
   text-decoration: none;

@@ -30,7 +30,7 @@
 /* Card con borde */
 .universidad-card {
   padding: 15px;
-  border: 2px solid #c4c2c2c5;
+  border: 2px solid hsla(0, 2%, 76%, 0.773);
   border-radius: 12px;
 
   display: flex;

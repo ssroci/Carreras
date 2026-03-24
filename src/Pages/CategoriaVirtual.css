@@ -1,212 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
 :root {
-  --black:        #0a0a0a;
-  --white:        #ffffff;
-  --accent:       #0062ff;
-  --accent-bg:    #e8f0ff;
-  --gray:         #34383f;
-  --gray-light:   #f4f5f7;
-  --border:       #e5e7eb;
-  --radius:       16px;
+  --accent-virtual: #10b981; /* Verde Esmeralda */
+  --accent-dark: #065f46;
+  --bg-main: #f8fafc;
+  --text-dark: #0f172a;
+  --text-muted: #475569;
+  --border: #e2e8f0;
 }
 
 .cat-virtual-container {
-  padding-top: 64px;
-  font-family: 'DM Sans', sans-serif;
-  color: var(--black);
-  background: rgba(255, 255, 255, 0.904);
+  background-color: var(--bg-main);
+  font-family: 'Plus Jakarta Sans', sans-serif;
   min-height: 100vh;
-  width: 100%;
+  padding-bottom: 5rem;
 }
 
+/* --- HERO ÓVALO VERDE (A DISTANCIA) --- */
 .cat-virtual-hero {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 88px 32px 56px;
-  border-bottom: 1px solid var(--border);
+  background: linear-gradient(135deg, #10b981 0%, #064e3b 100%);
+  padding: 80px 20px 100px; /* Un poco más bajo para ganar espacio arriba */
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  color: white;
+  clip-path: ellipse(150% 100% at 50% 0%);
 }
 
 .cat-virtual-titulo {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: clamp(52px, 8vw, 90px);
-  letter-spacing: -3px;
-  line-height: 1.0;
-  color: var(--black);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  color: white !important;
   margin: 0;
-  animation: fadeUp 0.55s ease both;
 }
 
 .cat-virtual-titulo span {
-  color: var(--accent);
+  font-size: 0.4em;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  opacity: 0.9;
+  margin-top: 5px;
 }
 
+/* --- BUSCADOR --- */
 .cat-virtual-search-area {
-  max-width: 700px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 40px 32px 24px;
-  background: transparent;
-  box-sizing: border-box;
-  animation: fadeUp 0.55s 0.15s ease both;
-}
-
-.buscador-input-wrapper {
-  background: transparent;
-  width: 100%;
-  padding: 0;
-}
-
-.buscador-input-wrapper input {
-  width: 100%;
-  padding: 18px 32px;
-  border: none;
-  border-radius: 50px;
-  font-size: 18px;
-  font-family: 'DM Sans', sans-serif;
-  outline: none;
-  background-color: #cfcecef1;
-  box-sizing: border-box;
-  transition: box-shadow 0.2s ease;
-}
-
-.buscador-input-wrapper input::placeholder {
-  color: #696969;
-  font-weight: 300;
-}
-
-.buscador-input-wrapper input:focus {
-  box-shadow: 0 4px 32px rgba(0, 98, 255, 0.13);
+  max-width: 700px; /* Más angosto para que se vea más centrado */
+  margin: 50px auto 15px;
+  padding: 0 20px;
 }
 
 .cat-virtual-contador {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 8px 32px 16px;
-  font-size: 14px;
-  color: var(--gray);
-  font-weight: 500;
   text-align: center;
+  color: var(--accent-virtual);
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 30px;
+  text-transform: uppercase;
 }
 
-.cat-virtual-sin-resultados {
-  max-width: 600px;
+/* --- LISTA DE ACORDEONES COMPACTA --- */
+.accordion-lista {
+  max-width: 850px; /* Reducimos el ancho máximo para que no sea tan larga la card */
   margin: 0 auto;
-  padding: 40px 24px;
-  font-size: 16px;
-  color: var(--gray);
-  text-align: center;
+  padding: 0 20px;
+  display: grid;
+  gap: 8px; /* Espacio mínimo entre cards */
 }
-/* ── ACCORDION DARK CARDS ── */
+
 .accordion-item {
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: var(--radius);
+  background: white !important;
+  border: 1px solid var(--border);
+  border-radius: 10px; /* Bordes más finos */
   overflow: hidden;
-  transition: box-shadow 0.2s ease, border-color 0.2s ease;
-  background: #181c28;
-}
-
-.accordion-item.abierto {
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  background: #1e2235;
-  border-color: rgba(0, 98, 255, 0.4);
-}
-
-.accordion-header {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 28px 32px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  text-align: left;
-  gap: 16px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
 }
 
 .accordion-item:hover {
-  border-color: rgba(0, 98, 255, 0.35);
+  border-color: var(--accent-virtual);
+  transform: translateY(-1px);
+}
+
+/* --- HEADER DE CARD (MÁS CHICA) --- */
+.accordion-header {
+  width: 100%;
+  padding: 12px 20px !important; /* Padding reducido a la mitad */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border: none;
+  cursor: pointer;
 }
 
 .accordion-info {
   display: flex;
-  align-items: center;
-  gap: 20px;
-  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .accordion-nombre {
-  font-family: "Syne", sans-serif;
-  font-size: 18px;
+  font-size: 1rem !important; /* Fuente reducida */
   font-weight: 700;
-  color: #ffffff;
-  letter-spacing: -0.3px;
+  color: var(--text-dark) !important;
+  text-align: left;
 }
 
 .accordion-duracion {
-  font-size: 13px;
-  color: rgba(255,255,255,0.5);
-  background: rgba(255,255,255,0.08);
-  padding: 4px 10px;
-  border-radius: 20px;
-  white-space: nowrap;
+  font-size: 0.7rem !important;
+  color: var(--accent-virtual);
+  background: rgba(16, 185, 129, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  margin-top: 3px;
+  display: inline-block;
 }
 
 .accordion-flecha {
-  font-size: 18px;
-  color: var(--accent);
-  flex-shrink: 0;
+  color: var(--accent-virtual);
+  font-size: 0.9rem;
+  opacity: 0.6;
 }
 
+/* --- CUERPO ABIERTO --- */
 .accordion-body {
-  padding: 0 32px 24px;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 15px 20px 20px;
+  background-color: #f8fafc; /* Gris muy claro */
+  border-top: 1px solid var(--border);
 }
 
 .accordion-desc {
-  font-size: 15px;
-  color: rgba(255,255,255,0.65);
-  line-height: 1.6;
-  margin: 16px 0 12px;
+  font-size: 0.85rem;
+  color: var(--text-muted) !important;
+  line-height: 1.5;
+  margin-bottom: 15px;
 }
 
 .accordion-unis h4 {
-  font-family: "Syne", sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
+  font-size: 0.65rem;
   text-transform: uppercase;
-  color: var(--accent);
-  margin: 16px 0 10px;
+  color: var(--accent-dark);
+  margin-bottom: 10px;
+  letter-spacing: 1px;
 }
 
 .accordion-uni-link {
-  display: inline-block;
-  font-size: 13px;
-  color: rgba(255,255,255,0.7);
-  text-decoration: none;
-  padding: 6px 12px;
+  display: block;
+  background: white;
+  border: 1px solid var(--border);
+  padding: 10px 15px;
   border-radius: 8px;
-  margin: 4px 4px 0 0;
-  border: 1px solid rgba(255,255,255,0.1);
-  background: rgba(255,255,255,0.04);
-  transition: background 0.15s, color 0.15s, border-color 0.15s;
-  line-height: 1.4;
+  text-decoration: none;
+  color: var(--text-dark) !important;
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: 0.2s;
 }
 
 .accordion-uni-link:hover {
-  background: rgba(0, 98, 255, 0.15);
-  color: #fff;
-  border-color: var(--accent);
+  border-color: var(--accent-virtual);
+  color: var(--accent-virtual) !important;
+  transform: translateX(4px);
 }
 
-@media (max-width: 768px) {
-  .accordion-lista { padding: 0 20px 60px; }
-  .accordion-header { padding: 16px 20px; }
-  .accordion-info { flex-direction: column; align-items: flex-start; gap: 6px; }
-  .accordion-body { padding: 0 20px 20px; }
+/* --- RESPONSIVE --- */
+@media (max-width: 600px) {
+  .accordion-header {
+    padding: 10px 15px !important;
+  }
+  .accordion-nombre {
+    font-size: 0.95rem !important;
+  }
 }

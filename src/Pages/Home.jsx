@@ -1,6 +1,7 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Footer from "../Components/Footer";
 
 function Home() {
   const [universidades, setUniversidades] = useState(0);
@@ -127,6 +128,12 @@ function Home() {
           </Link>
         </div>
       </div>
+
+
+    <Footer />
+
+
+
 
     </div>
   );

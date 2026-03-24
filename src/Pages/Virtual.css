@@ -1,307 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
 :root {
-  --black:        #0a0a0a;
-  --white:        #ffffff;
-  --accent:       #0062ff;
-  --accent-bg:    #e8f0ff;
-  --gray:         #34383f;
-  --gray-light:   #f4f5f7;
-  --border:       #e5e5e5;
-  --radius:       6px;
+  --accent-virtual: #10b981; /* Verde Esmeralda corregido */
+  --accent-gradient: linear-gradient(135deg, #10b981 0%, #064e3b 100%);
+  --bg-main: #f8fafc;
+  --text-dark: #0f172a;
+  --text-muted: #475569;
+  --border: #e2e8f0;
 }
 
 .virtual-container {
-  padding-top: 64px;
-  font-family: 'DM Sans', sans-serif;
-  color: var(--black);
-  background: rgba(255, 255, 255, 0.904);
+  background-color: var(--bg-main);
+  font-family: 'Plus Jakarta Sans', sans-serif;
   min-height: 100vh;
-  width: 100%;
+  padding-bottom: 5rem;
 }
 
+/* --- HERO ÓVALO VERDE --- */
 .virtual-hero {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 88px 32px 56px;
-  border-bottom: 1px solid var(--border);
+  background: var(--accent-gradient);
+  padding: 100px 20px 120px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  color: white;
+  clip-path: ellipse(150% 100% at 50% 0%);
 }
 
 .virtual-titulo {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: clamp(52px, 8vw, 90px);
-  letter-spacing: -3px;
-  line-height: 1.0;
-  color: var(--black);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 700;
+  color: white !important;
   margin: 0;
-  animation: fadeUp 0.55s ease both;
 }
 
 .virtual-titulo span {
-  color: var(--accent);
+  color: white;
+  opacity: 0.9;
+  font-style: italic;
 }
 
-.virtual-subtitulo {
-  font-size: clamp(17px, 2vw, 22px);
-  color: rgb(77, 76, 76);
-  font-weight: 300;
-  line-height: 1.7;
-  max-width: 560px;
-  text-align: center;
-  animation: fadeUp 0.55s 0.1s ease both;
-}
-
+/* --- ÁREA DE BÚSQUEDA --- */
 .virtual-search-area {
-  max-width: 700px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 40px 32px 24px;
-  background: transparent;
-  box-sizing: border-box;
-  animation: fadeUp 0.55s 0.15s ease both;
+  max-width: 800px;
+  margin: 60px auto 10px; /* Bajado para que no se tape */
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.buscador-input-wrapper {
-  background: transparent;
+/* Estilo del input del buscador */
+.virtual-search-area input {
   width: 100%;
-  padding: 0;
-}
-
-.buscador-input-wrapper input {
-  width: 100%;
-  padding: 18px 32px;
-  border: none;
+  padding: 14px 25px; /* Un poco más compacto */
   border-radius: 50px;
-  font-size: 18px;
-  font-family: 'DM Sans', sans-serif;
+  border: 1px solid var(--border);
+  background-color: #e2e8f0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  color: #475569;
   outline: none;
-  background-color: #cfcecef1;
-  box-sizing: border-box;
-  transition: box-shadow 0.2s ease;
+  transition: all 0.3s ease;
 }
 
-.buscador-input-wrapper input::placeholder {
-  color: #696969;
-  font-weight: 300;
-}
-
-.buscador-input-wrapper input:focus {
-  box-shadow: 0 4px 32px rgba(0, 98, 255, 0.13);
+.virtual-search-area input:focus {
+  background-color: #ffffff;
+  border-color: var(--accent-virtual);
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
 }
 
 .virtual-contador {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 8px 32px 16px;
-  font-size: 13px;
-  color: #666;
-  font-weight: 500;
   text-align: center;
+  color: var(--accent-virtual);
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* ── CATEGORÍAS ── */
+/* --- GRID DE CATEGORÍAS (CARDS MÁS CHICAS) --- */
 .virtual-categorias {
-  max-width: 1400px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 48px 32px 80px;
-  display: flex;
-  gap: 16px;
-  flex-wrap: nowrap;
-  justify-content: center;
+  display: grid;
+  /* Hacemos las columnas un poco más angostas para que entren más */
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
+  gap: 12px;
+  padding: 0 20px;
 }
 
 .virtual-categoria-link {
   text-decoration: none;
-  flex: 1;
-  min-width: 0;
 }
 
 .virtual-categoria-card {
-  background: rgba(117, 145, 146, 0.24);
-  border-radius: 16px;
-  padding: 40px 24px;
-  font-family: 'Syne', sans-serif;
-  font-size: 20px;
+  background: white;
+  /* Reducimos el padding de 35px a 20px para que sean más bajas */
+  padding: 20px 15px; 
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  color: var(--text-dark);
   font-weight: 700;
-  letter-spacing: -0.3px;
-  color: var(--black);
+  font-size: 0.95rem; /* Fuente un pelín más chica */
   text-align: center;
-  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
-  position: relative;
-  overflow: hidden;
-  animation: fadeUp 0.4s ease both;
-}
-
-.virtual-categoria-card::after {
-  content: '→';
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  font-size: 18px;
-  color: var(--accent);
-  opacity: 0;
-  transform: translateX(-6px);
-  transition: opacity 0.2s, transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .virtual-categoria-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.192);
-  background: var(--white);
-  border: 1px solid rgba(95, 94, 94, 0.514);
+  border-color: var(--accent-virtual);
+  color: var(--accent-virtual);
+  box-shadow: 0 10px 20px -5px rgba(16, 185, 129, 0.15);
 }
 
-.virtual-categoria-card:hover::after {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.virtual-categoria-card:nth-child(1) { animation-delay: 0.04s; }
-.virtual-categoria-card:nth-child(2) { animation-delay: 0.08s; }
-.virtual-categoria-card:nth-child(3) { animation-delay: 0.12s; }
-.virtual-categoria-card:nth-child(4) { animation-delay: 0.16s; }
-.virtual-categoria-card:nth-child(5) { animation-delay: 0.20s; }
-
-/* ── ACCORDION CLARO ── */
-.accordion-lista {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 32px 80px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.accordion-item {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  transition: box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.accordion-item:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
-}
-
-.accordion-item.abierto {
-  border-color: #ccc;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
-}
-
-.accordion-header {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 16px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  text-align: left;
-  gap: 16px;
-}
-
-.accordion-info {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex: 1;
-}
-
-.accordion-nombre {
-  font-family: 'Syne', sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--black);
-  letter-spacing: -0.2px;
-}
-
-.accordion-duracion {
-  font-size: 13px;
-  color: #666;
-  background: #f0f0f0;
-  padding: 3px 10px;
-  border-radius: 20px;
-  white-space: nowrap;
-}
-
-.accordion-flecha {
-  font-size: 16px;
-  color: var(--accent);
-  flex-shrink: 0;
-}
-
-.accordion-body {
-  padding: 0 16px 14px;
-  border-top: 1px solid var(--border);
-}
-
-.accordion-desc {
-  font-size: 15px;
-  color: var(--gray);
-  line-height: 1.6;
-  margin: 12px 0 8px;
-}
-
-.accordion-unis h4 {
-  font-family: 'Syne', sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin: 12px 0 8px;
-}
-
-.accordion-uni-link {
-  display: inline-block;
-  font-size: 13px;
-  color: var(--gray);
-  text-decoration: none;
-  padding: 5px 10px;
-  border-radius: 6px;
-  margin: 3px 4px 0 0;
-  border: 1px solid var(--border);
-  background: #fafafa;
-  transition: background 0.15s, color 0.15s, border-color 0.15s;
-  line-height: 1.4;
-}
-
-.accordion-uni-link:hover {
-  background: var(--accent-bg);
-  color: var(--accent);
-  border-color: var(--accent);
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(18px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-@media (max-width: 768px) {
-  .virtual-hero {
-    padding: 56px 20px 40px;
-  }
-  .virtual-titulo {
-    font-size: clamp(40px, 10vw, 70px);
-    letter-spacing: -1.5px;
-  }
-  .virtual-search-area {
-    padding: 28px 20px 24px;
-  }
-  .virtual-categorias {
-    padding: 28px 20px 60px;
-    flex-direction: column;
-  }
-  .virtual-categoria-link {
-    min-width: unset;
-  }
-  .accordion-lista { padding: 16px 20px 60px; }
-  .accordion-header { padding: 12px 14px; }
-  .accordion-info { flex-direction: column; align-items: flex-start; gap: 4px; }
-  .accordion-body { padding: 0 14px 14px; }
+/* --- AJUSTE PARA RESULTADOS (SI LOS HAY EN ESTA VISTA) --- */
+.virtual-sin-resultados {
+  text-align: center;
+  color: var(--text-muted);
+  margin-top: 40px;
 }

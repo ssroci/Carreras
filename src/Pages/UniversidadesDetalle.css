@@ -1,6 +1,6 @@
 /* CONTENIDO DE LA PÁGINA */
 .contenido {
-  max-width: 750px;
+  max-width: 650px;
   margin: 30px auto 20px auto;
   padding: 0 20px;
 }
@@ -64,7 +64,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto 10px auto;
   padding: 14px 16px;
   border: 1px solid #e5e5e5;

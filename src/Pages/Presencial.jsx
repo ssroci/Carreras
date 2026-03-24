@@ -1,30 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { unrnData } from "../Data/Presencial/Unrn";
-import { ubaCarreras } from "../Data/Presencial/uba";
-import { utnCarreras } from "../Data/Presencial/utn";
-import { unrcCarreras } from "../Data/Presencial/unrc";
-import { unluCarreras } from "../Data/Presencial/unlu";
-import { unlpCarreras } from "../Data/Presencial/unlp";
-import { uncomaData } from "../Data/Presencial/uncomaData";
-import { ufloCarreras } from "../Data/Presencial/uflo";
-import { ucasalCarreras } from "../Data/Presencial/ucasal";
-import { us21Data } from "../Data/Presencial/siglo21";
-import { uncCarreras } from "../Data/Presencial/unc";
-import { unroData } from "../Data/Presencial/unro";
-import { unslData } from "../Data/Presencial/sanluis";
-import { umData } from "../Data/Presencial/um";
-import { carrerasUCA } from "../Data/Presencial/uca";
+import { todasPresenciales } from "../Data/Presencial/todasPresenciales";
 import Buscador from "../Components/Buscador";
-
 import "./Presencial.css";
 
-const areasData = [
-  ...unrnData, ...utnCarreras, ...unrcCarreras, ...unluCarreras,
-  ...unlpCarreras, ...uncomaData, ...ufloCarreras, ...ucasalCarreras,
-  ...ubaCarreras, ...uncCarreras, ...unroData, ...us21Data,
-  ...unslData, ...umData, ...carrerasUCA,
-];
+const areasData = todasPresenciales;
 
 function Presencial() {
   const [busqueda, setBusqueda] = useState("");
@@ -34,7 +14,10 @@ function Presencial() {
 
   const resultados = busqueda
     ? areasData
-        .filter((c) => c.nombre.toLowerCase().includes(busqueda.toLowerCase()))
+        .filter((c) =>
+          c.nombre.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+          .includes(busqueda.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""))
+        )
         .sort((a, b) => a.nombre.localeCompare(b.nombre))
     : [];
 

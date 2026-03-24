@@ -1,5 +1,5 @@
 
-
+import "./Buscador.css";
 function Buscador({ setBusqueda }) {
   return (
     <div className="buscador-input-wrapper">
