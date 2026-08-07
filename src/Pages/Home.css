@@ -12,17 +12,17 @@
   --radius:       16px;
 }
 
-/* ── WRAPPER ── */
 .home {
-  padding-top: 64px; /* altura del header fijo */
+  padding-top: 64px; 
   font-family: 'DM Sans', sans-serif;
   color: rgb(22, 22, 22);
   background: rgb(255, 255, 255);
+
 }
 
-/* ── HERO ── */
+
 .hero {
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 96px 48px 64px;
 }
@@ -88,14 +88,14 @@
     width: 180px;
   }
 }
-/* ── STATS ── */
+
 .stats {
   display: flex;
   gap: 0;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding: 0 48px;
-  max-width: 1100px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -125,11 +125,12 @@
   font-weight: 400;
 }
 
-/* ── SECCIONES ── */
+
 .seccion {
-  max-width: 900px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 72px 48px;
+
   
 }
 
@@ -146,7 +147,6 @@
   margin-bottom: 32px;
 }
 
-/* ── GRID DE CARDS ── */
 .tipos {
   display: flex;
   gap: 23px;
@@ -194,7 +194,6 @@
   transform: translateX(0);
 }
 
-/* ── ICONO ── */
 .card-circle {
   width: 52px;
   height: 52px;
@@ -221,7 +220,7 @@
   color: var(--white);
 }
 
-/* ── CARD TEXTO ── */
+
 .card h3 {
   font-family: 'Syne', sans-serif;
   font-size: 30px;
@@ -238,7 +237,6 @@
   font-weight: 400;
 }
 
-/* ── ANIMACIÓN ENTRADA ── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0);    }
@@ -248,7 +246,6 @@
 .subtitulo    { animation: fadeUp 0.55s 0.1s ease both; }
 .stats        { animation: fadeUp 0.55s 0.2s ease both; }
 
-/* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   .hero        { padding: 64px 24px 48px; }
   .hero h1     { letter-spacing: -1.5px; }

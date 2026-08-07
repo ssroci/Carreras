@@ -109,9 +109,7 @@ export const carrerasSiglo21 = [
   "Especialización en Negocios Internacionales - Córdoba - Virtual - Posgrado|https://21.edu.ar/carreras-y-programas/especializacion-en-negocios-internacionales",
   "Especialización en Políticas Públicas de Seguridad y Criminológicas - Córdoba - Virtual - Posgrado|https://21.edu.ar/carreras-y-programas/especializacion-en-politicas-publicas-de-seguridad-y-criminologicas",
 
-  // ============================================================
-  // POSGRADO – Maestrías
-  // ============================================================
+ 
 
   "Maestría en Administración de Empresas (MBA) - Córdoba - Presencial/Virtual - Posgrado|https://21.edu.ar/carreras-y-programas/maestria-en-administracion-de-empresas",
   "Maestría en Administración de Negocios y Aplicaciones Tecnológicas en la Empresa - Córdoba - Presencial/Virtual - Posgrado|https://21.edu.ar/carreras-y-programas/maestria-en-administracion-de-negocios-y-aplicaciones-tecnologicas-en-la-empresa",

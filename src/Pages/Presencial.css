@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
 
 :root {
-  --accent-presencial: #7c3aed; /* Violeta fuerte */
+  --accent-presencial: #7c3aed; 
   --accent-gradient: linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%);
   --bg-main: #f8fafc;
   --text-dark: #0f172a;
@@ -16,9 +16,9 @@
   padding-bottom: 5rem;
 }
 
-/* --- HERO ÓVALO VIOLETA --- */
+
 .presencial-hero {
-  /* Usamos el degradado violeta que definimos antes */
+  
   background: linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%) !important;
   padding: 100px 20px 120px;
   text-align: center;
@@ -48,7 +48,7 @@
   line-height: 1.5;
 }
 
-/* --- BUSCADOR --- */
+
 .presencial-search-area {
   max-width: 700px;
   margin: 50px auto 20px;
@@ -57,16 +57,16 @@
 
 .contador {
   text-align: center;
-  color: #7c3aed !important; /* Cambiamos el azul de la captura por violeta */
+  color: #7c3aed !important; 
   font-weight: 700;
   font-size: 0.85rem;
   margin-top: 20px;
   margin-bottom: 25px;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 1px;
 }
 
-/* --- GRID DE CATEGORÍAS (BOTONES TIPO CARD) --- */
+
 .categorias {
   max-width: 900px;
   margin: 20px auto;
@@ -78,12 +78,12 @@
 
 .categoria-card {
   background: white;
-  padding: 20px 15px; /* Tamaño compacto */
+  padding: 20px 15px; 
   border-radius: 12px;
   border: 1px solid var(--border);
   color: var(--text-dark);
   font-weight: 700;
-  text-decoration: none; /* Quita el subrayado azul */
+  text-decoration: none; 
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease;
@@ -99,7 +99,7 @@
   box-shadow: 0 10px 20px -5px rgba(124, 58, 237, 0.2);
 }
 
-/* --- LISTA DE RESULTADOS (ACCORDION COMPACTO) --- */
+
 .accordion-lista {
   max-width: 850px;
   margin: 0 auto;
@@ -118,7 +118,7 @@
 
 .accordion-header {
   width: 100%;
-  padding: 12px 20px !important; /* Padding reducido para que sean más chicas */
+  padding: 12px 20px !important; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -151,7 +151,7 @@
   opacity: 0.6;
 }
 
-/* --- CUERPO DEL ACORDEÓN --- */
+
 .accordion-body {
   padding: 15px 20px 20px;
   background-color: #f8fafc;
@@ -167,7 +167,7 @@
 
 .accordion-unis h4 {
   font-size: 0.65rem;
-  text-transform: uppercase;
+  text-transform: none;
   color: var(--accent-presencial);
   margin-bottom: 10px;
   letter-spacing: 1px;
@@ -197,4 +197,52 @@
   text-align: center;
   color: var(--text-muted);
   margin-top: 30px;
+}
+.carreras-destacadas {
+  margin-top: 50px;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.carreras-destacadas h2 {
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+.cards-destacadas {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card-destacada {
+  background: rgba(165, 164, 164, 0.637);
+  padding: 15px;
+  width: 260px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  border: 2px solid rgb(179, 145, 185);
+}
+
+.card-destacada:hover {
+  transform: translateY(-5px);
+}
+
+.ver-mas {
+  display: inline-block;
+  margin-top: 10px;
+  color: #202122;
+  font-weight: bold;
+}
+.imagen-carrera {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 10px;
+
 }

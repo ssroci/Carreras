@@ -55,7 +55,7 @@ function Home() {
 </div>
 
 
-      {/* STATS */}
+      {}
       <div className="stats">
         <div className="stat">
           <h2>+{universidades}</h2>
@@ -68,7 +68,7 @@ function Home() {
         </div>
       </div>
 
-      {/* UNIVERSIDADES */}
+      {}
       <div className="seccion">
         <h2 className="seccion-titulo">Universidades</h2>
       
@@ -112,7 +112,7 @@ function Home() {
         </div>
       </div>
 
-      {/* CURSOS */}
+      {}
       <div className="seccion">
         <h2 className="seccion-titulo">Cursos</h2>
 

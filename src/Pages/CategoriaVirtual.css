@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
 
 :root {
-  --accent-virtual: #10b981; /* Verde Esmeralda */
-  --accent-dark: #065f46;
+  --accent-virtual: #10b981; 
   --bg-main: #f8fafc;
   --text-dark: #0f172a;
   --text-muted: #475569;
@@ -16,10 +15,9 @@
   padding-bottom: 5rem;
 }
 
-/* --- HERO ÓVALO VERDE (A DISTANCIA) --- */
 .cat-virtual-hero {
   background: linear-gradient(135deg, #10b981 0%, #064e3b 100%);
-  padding: 80px 20px 100px; /* Un poco más bajo para ganar espacio arriba */
+  padding: 80px 20px 100px; 
   text-align: center;
   color: white;
   clip-path: ellipse(150% 100% at 50% 0%);
@@ -36,15 +34,15 @@
 .cat-virtual-titulo span {
   font-size: 0.4em;
   display: block;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 3px;
   opacity: 0.9;
   margin-top: 5px;
 }
 
-/* --- BUSCADOR --- */
+
 .cat-virtual-search-area {
-  max-width: 700px; /* Más angosto para que se vea más centrado */
+  max-width: 700px; 
   margin: 50px auto 15px;
   padding: 0 20px;
 }
@@ -55,25 +53,25 @@
   font-weight: 700;
   font-size: 0.85rem;
   margin-bottom: 30px;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
-/* --- LISTA DE ACORDEONES COMPACTA --- */
+
 .accordion-lista {
-  max-width: 850px; /* Reducimos el ancho máximo para que no sea tan larga la card */
+  max-width: 850px; 
   margin: 0 auto;
   padding: 0 20px;
   display: grid;
-  gap: 8px; /* Espacio mínimo entre cards */
+  gap: 20px;
 }
 
 .accordion-item {
   background: white !important;
   border: 1px solid var(--border);
-  border-radius: 10px; /* Bordes más finos */
+  border-radius: 10px; 
   overflow: hidden;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
 .accordion-item:hover {
@@ -81,10 +79,10 @@
   transform: translateY(-1px);
 }
 
-/* --- HEADER DE CARD (MÁS CHICA) --- */
+
 .accordion-header {
   width: 100%;
-  padding: 12px 20px !important; /* Padding reducido a la mitad */
+  padding: 12px 20px !important; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -100,7 +98,7 @@
 }
 
 .accordion-nombre {
-  font-size: 1rem !important; /* Fuente reducida */
+  font-size: 1rem !important; 
   font-weight: 700;
   color: var(--text-dark) !important;
   text-align: left;
@@ -123,10 +121,10 @@
   opacity: 0.6;
 }
 
-/* --- CUERPO ABIERTO --- */
+
 .accordion-body {
   padding: 15px 20px 20px;
-  background-color: #f8fafc; /* Gris muy claro */
+  background-color: #f8fafc; 
   border-top: 1px solid var(--border);
 }
 
@@ -139,7 +137,7 @@
 
 .accordion-unis h4 {
   font-size: 0.65rem;
-  text-transform: uppercase;
+  text-transform: none;
   color: var(--accent-dark);
   margin-bottom: 10px;
   letter-spacing: 1px;
@@ -165,8 +163,10 @@
   transform: translateX(4px);
 }
 
-/* --- RESPONSIVE --- */
 @media (max-width: 600px) {
+  .accordion-lista {
+    gap: 14px;
+  }
   .accordion-header {
     padding: 10px 15px !important;
   }

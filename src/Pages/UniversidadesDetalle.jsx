@@ -52,6 +52,7 @@ import { carrerasUNF } from "../Data/CarrerasUni/unf";
 import {carrerasUNSAdA} from "../Data/CarrerasUni/unsadadata"
 
 import "./UniversidadesDetalle.css";
+import { carrerasUNS } from "../Data/CarrerasUni/unsdata";
 
 function UniversidadesDetalle() {
   const { id } = useParams();
@@ -108,6 +109,7 @@ function UniversidadesDetalle() {
      ucasal: { nombre: "Universidad Católica de Salta", carreras: carrerasUCASAL },
      unf: { nombre: "Universidad Nacional de Formosa", carreras: carrerasUNF },
     unsada: { nombre: "Universidad Nacional de San Antonio de Areco", carreras: carrerasUNSAdA },
+        uns: { nombre: "Universidad Nacional del Sur", carreras: carrerasUNS },
   };
 
   const universidad = universidadesData[id];

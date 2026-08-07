@@ -127,7 +127,6 @@ function Cursos() {
   const [busqueda, setBusqueda] = useState("");
   const [abierto, setAbierto] = useState(null);
 
-  // AGRUPAR CURSOS POR NOMBRE
   const cursosAgrupados = Object.values(
     (cursosData || []).reduce((acc, curso) => {
       if (!curso?.nombre) return acc;
@@ -159,7 +158,7 @@ function Cursos() {
     }, {})
   );
 
-  // FILTRO BUSCADOR
+
   const cursos = cursosAgrupados.filter((curso) =>
     curso.nombre
       .toLowerCase()
@@ -173,7 +172,7 @@ function Cursos() {
   return (
     <div className="cursos-container">
 
-      {/* HERO */}
+      {}
       <div className="cursos-hero">
         <div className="cursos-hero-inner">
           <p className="cursos-hero-label">
@@ -189,15 +188,9 @@ function Cursos() {
         </div>
       </div>
 
-      {/* BUSCADOR */}
+      {}
       <div className="cursos-search-area">
-        <div className="cursos-search-row">
-          <Buscador setBusqueda={setBusqueda} />
-
-          <span className="cursos-badge-count">
-            {cursos.length} cursos
-          </span>
-        </div>
+        <Buscador setBusqueda={setBusqueda} />
       </div>
 
       <p className="cursos-contador">
@@ -210,7 +203,7 @@ function Cursos() {
         </p>
       )}
 
-      {/* LISTA */}
+      {}
       <div className="cursos-acc-lista">
         {cursos.map((curso, i) => {
           const institucionesUnicas = new Set(

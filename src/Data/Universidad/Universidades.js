@@ -6,6 +6,7 @@ const UniversidadUnion = [
   { id: "unc", nombre: "Universidad Nacional de Córdoba", logo: "/logos/unc.png" },
   { id: "unlp", nombre: "Universidad Nacional de La Plata", logo: "/logos/unlp.png" },
   { id: "unrc", nombre: "Universidad Nacional de Río Cuarto", logo: "/logos/unrc.png" },
+    { id: "uns", nombre: "Universidad Nacional del Sur ", logo: "/logos/uns.png" },
 
   { id: "unlu", nombre: "Universidad Nacional de Luján", logo: "/logos/unlu.png" },
   { id: "ucasal", nombre: "Universidad Católica de Salta", logo: "/logos/ucasal.png" },

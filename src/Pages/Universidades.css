@@ -1,4 +1,4 @@
-/* Contenedor general */
+
 .universidades-page {
   padding: 40px 20px;
   text-align: center;
@@ -12,7 +12,6 @@
   margin-top: 50px;
 }
 
-/* Grid de logos */
 .universidades-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -20,14 +19,14 @@
   justify-items: center;
 }
 
-/* Wrapper para cada card + subtítulo */
+
 .universidad-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Card con borde */
+
 .universidad-card {
   padding: 15px;
   border: 2px solid hsla(0, 2%, 76%, 0.773);
@@ -42,14 +41,14 @@
   
 }
 
-/* Hover: elevación y borde azul */
+
 .universidad-card:hover {
   transform: translateY(-5px);
   border-color: #4fc3f7;
  
 }
 
-/* Logo dentro de la card */
+
 .universidad-logo {
    width: 150px;
   height: 70px;
@@ -57,7 +56,7 @@
   object-fit: contain;
 }
 
-/* Nombre debajo de la card, oculto por defecto */
+
 .universidad-nombre {
   margin-top: 6px;
   font-size: 12px;
@@ -69,14 +68,13 @@
   max-width: 140px;
 }
 
-/* Se muestra al pasar el mouse por el wrapper */
+
 .universidad-wrapper:hover .universidad-nombre {
   opacity: 1;
 }
 
-/* ===== Responsive ===== */
 
-/* Tablets */
+
 @media (max-width: 768px) {
   .universidades-grid {
     gap: 20px;
@@ -92,7 +90,7 @@
   }
 }
 
-/* Móviles */
+
 @media (max-width: 480px) {
   .universidades-grid {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));

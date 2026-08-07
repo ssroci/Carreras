@@ -1,0 +1,113 @@
+
+
+.detalle-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+
+
+.detalle-titulo {
+  font-size: 36px;
+  font-weight: 700;
+  color: #b30000;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+
+
+.detalle-desc {
+  font-size: 17px;
+  color: #444;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 35px auto;
+  line-height: 1.6;
+}
+
+.detalle-subtitulo {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #222;
+  text-align: center;
+}
+
+
+.lista-universidades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 18px;
+}
+
+
+
+.uni-card {
+  display: block;
+  background-color: #ffffff;
+  padding: 18px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #222;
+  font-size: 16px;
+  border: 1px solid #e3e3e3;
+
+  transition: all 0.2s ease;
+}
+
+
+
+.uni-card:hover {
+  transform: translateY(-3px);
+  border-color: #b30000;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  color: #b30000;
+}
+
+
+
+.boton-volver {
+  display: inline-block;
+  margin-bottom: 25px;
+  padding: 10px 18px;
+  background-color: #b30000;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background-color 0.2s ease;
+}
+
+.boton-volver:hover {
+  background-color: #8f0000;
+}
+
+
+
+.contador-universidades {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: #555;
+}
+
+
+
+@media (max-width: 768px) {
+
+  .detalle-titulo {
+    font-size: 28px;
+  }
+
+  .detalle-desc {
+    font-size: 16px;
+  }
+
+  .detalle-subtitulo {
+    font-size: 20px;
+  }
+
+}

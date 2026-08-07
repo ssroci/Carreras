@@ -7,7 +7,7 @@
   padding-bottom: 5rem;
 }
 
-/* --- HERO VIOLETA (UNIFICADO) --- */
+
 .categoria-hero {
   background: linear-gradient(135deg, #7c3aed 0%, #4c1d95 100%);
   padding: 100px 20px 120px;
@@ -25,10 +25,10 @@
   letter-spacing: -1px;
 }
 
-/* --- BUSCADOR --- */
+
 .categoria-search-area {
   max-width: 800px;
-  margin: 60px auto 20px; /* Bajado para visibilidad */
+  margin: 60px auto 20px; 
   padding: 0 20px;
 }
 
@@ -40,7 +40,7 @@
   margin-bottom: 40px;
 }
 
-/* --- CARDS BLANCAS (IGUAL AL HOME) --- */
+
 .accordion-item {
   background: white !important;
   border: 1px solid #e2e8f0;
@@ -64,7 +64,7 @@
 .accordion-nombre {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #0f172a !important; /* Texto oscuro visible */
+  color: #0f172a !important; 
   text-align: left;
 }
 
@@ -79,7 +79,7 @@
   border-radius: 20px;
 }
 
-/* --- CUERPO CON FONDO GRIS PARA CONTRASTE --- */
+
 .accordion-body {
   padding: 24px 32px 32px;
   background-color: #f1f5f9; 

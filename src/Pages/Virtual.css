@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
 
 :root {
-  --accent-virtual: #10b981; /* Verde Esmeralda corregido */
+  --accent-virtual: #10b981; 
   --accent-gradient: linear-gradient(135deg, #10b981 0%, #064e3b 100%);
   --bg-main: #f8fafc;
   --text-dark: #0f172a;
@@ -16,9 +16,9 @@
   padding-bottom: 5rem;
 }
 
-/* --- HERO ÓVALO VERDE --- */
+
 .virtual-hero {
-  background: var(--accent-gradient);
+  background: linear-gradient(135deg, #10b981 0%, #064e3b 100%);
   padding: 100px 20px 120px;
   text-align: center;
   color: white;
@@ -39,19 +39,18 @@
   font-style: italic;
 }
 
-/* --- ÁREA DE BÚSQUEDA --- */
 .virtual-search-area {
   max-width: 800px;
-  margin: 60px auto 10px; /* Bajado para que no se tape */
+  margin: 60px auto 10px; 
   padding: 0 20px;
   display: flex;
   justify-content: center;
 }
 
-/* Estilo del input del buscador */
+
 .virtual-search-area input {
   width: 100%;
-  padding: 14px 25px; /* Un poco más compacto */
+  padding: 14px 25px; 
   border-radius: 50px;
   border: 1px solid var(--border);
   background-color: #e2e8f0;
@@ -74,18 +73,18 @@
   font-weight: 700;
   font-size: 0.85rem;
   margin-bottom: 30px;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 1px;
 }
 
-/* --- GRID DE CATEGORÍAS (CARDS MÁS CHICAS) --- */
+
 .virtual-categorias {
   max-width: 1000px;
   margin: 0 auto;
   display: grid;
-  /* Hacemos las columnas un poco más angostas para que entren más */
+  
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
-  gap: 12px;
+  gap: 20px;
   padding: 0 20px;
 }
 
@@ -95,13 +94,13 @@
 
 .virtual-categoria-card {
   background: white;
-  /* Reducimos el padding de 35px a 20px para que sean más bajas */
-  padding: 20px 15px; 
+  
+  padding: 24px 15px; 
   border-radius: 12px;
   border: 1px solid var(--border);
   color: var(--text-dark);
   font-weight: 700;
-  font-size: 0.95rem; /* Fuente un pelín más chica */
+  font-size: 0.95rem; 
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease;
@@ -118,9 +117,15 @@
   box-shadow: 0 10px 20px -5px rgba(16, 185, 129, 0.15);
 }
 
-/* --- AJUSTE PARA RESULTADOS (SI LOS HAY EN ESTA VISTA) --- */
 .virtual-sin-resultados {
   text-align: center;
   color: var(--text-muted);
   margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+  .virtual-categorias {
+    gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
 }
